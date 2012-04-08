@@ -28,7 +28,6 @@ upThemeC = \drummode
 
 up = \drummode
 {
-  r2
   sn16 sn sn sn sn4
 
   \upTheme
@@ -54,7 +53,7 @@ downTheme = \drummode
 
 down = \drummode 
 {
-  s1
+  s2
   \downTheme
   \downTheme
   \downTheme
@@ -74,6 +73,7 @@ down = \drummode
 \new DrumStaff 
 {
   R1*3
+  r2
 
   <<
     \new DrumVoice { \voiceOne \up }

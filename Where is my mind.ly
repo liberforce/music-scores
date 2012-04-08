@@ -28,7 +28,7 @@ upThemeC = \drummode
 
 up = \drummode
 {
-  sn16 sn sn sn sn4
+  sn16\< sn sn sn sn4\!
 
   \upTheme
   \upTheme

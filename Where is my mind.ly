@@ -6,7 +6,7 @@
 	composer="Pixies"
 }
 
-upTheme = \drummode 
+upTheme = \drummode
 {
   hh8 hh << sn hh >> hh 
 }
@@ -19,12 +19,22 @@ upThemeEndA = \drummode
 up = \drummode
 {
   \upTheme
+  \upTheme
+  \upTheme
   \upThemeEndA
+}
+
+downTheme = \drummode 
+{
+  bd8 bd r4 
 }
 
 down = \drummode 
 {
-  bd8 bd r4 bd8 bd r4
+  \downTheme
+  \downTheme
+  \downTheme
+  \downTheme
 }
 
 \new DrumStaff 

@@ -11,26 +11,60 @@ upTheme = \drummode
   hh8 hh << sn hh >> hh 
 }
 
-upThemeEndA = \drummode
+upThemeA = \drummode
+{
+  hh8 hh << sn hh >> hhho 
+}
+
+upThemeB = \drummode
+{
+  hh8 hh << sn hh >> cyms 
+}
+
+upThemeC = \drummode
 {
   hh8 hh << sn hh >> hhho 
 }
 
 up = \drummode
 {
+  r2
+  sn16 sn sn sn sn4
+
   \upTheme
   \upTheme
   \upTheme
-  \upThemeEndA
+  \upThemeA
+
+  \upTheme
+  \upTheme
+  \upTheme
+  \upThemeB
+
+  \upTheme
+  \upTheme
+  \upTheme
+  \upThemeC
 }
 
 downTheme = \drummode 
 {
-  bd8 bd r4 
+  bd8 bd s4 
 }
 
 down = \drummode 
 {
+  s1
+  \downTheme
+  \downTheme
+  \downTheme
+  \downTheme
+
+  \downTheme
+  \downTheme
+  \downTheme
+  \downTheme
+
   \downTheme
   \downTheme
   \downTheme
@@ -38,7 +72,11 @@ down = \drummode
 }
 
 \new DrumStaff 
-<<
-  \new DrumVoice { \voiceOne \up }
-  \new DrumVoice { \voiceTwo \down }
->>
+{
+  R1*3
+
+  <<
+    \new DrumVoice { \voiceOne \up }
+    \new DrumVoice { \voiceTwo \down }
+  >>
+}

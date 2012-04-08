@@ -6,24 +6,44 @@
 	composer="Pixies"
 }
 
-upTheme = \drummode
+upHalfTheme = \drummode
 {
   hh8 hh << sn hh >> hh 
 }
 
-upThemeA = \drummode
+upHalfThemeA = \drummode
 {
   hh8 hh << sn hh >> hhho 
 }
 
-upThemeB = \drummode
+upHalfThemeB = \drummode
 {
   hh8 hh << sn hh >> cyms 
 }
 
-upThemeC = \drummode
+upHalfThemeC = \drummode
 {
   hh8 hh << sn hh >> hhho 
+}
+
+upTheme = 
+{
+  \upHalfTheme \upHalfTheme
+}
+
+upThemeA = 
+{
+  \upHalfTheme \upHalfThemeA
+}
+
+upThemeB = 
+{
+  \upHalfTheme \upHalfThemeB
+}
+
+upThemeC = 
+{
+  \upHalfTheme \upHalfThemeC 
 }
 
 up = \drummode
@@ -31,40 +51,25 @@ up = \drummode
   sn16\< sn sn sn sn4\!
 
   \upTheme
-  \upTheme
-  \upTheme
   \upThemeA
-
-  \upTheme
-  \upTheme
-  \upTheme
   \upThemeB
-
-  \upTheme
-  \upTheme
-  \upTheme
   \upThemeC
 }
 
-downTheme = \drummode 
+downHalfTheme = \drummode 
 {
   bd8 bd s4 
+}
+
+downTheme =
+{
+  \downHalfTheme 
+  \downHalfTheme 
 }
 
 down = \drummode 
 {
   s2
-  \downTheme
-  \downTheme
-  \downTheme
-  \downTheme
-
-  \downTheme
-  \downTheme
-  \downTheme
-  \downTheme
-
-  \downTheme
   \downTheme
   \downTheme
   \downTheme

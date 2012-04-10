@@ -50,8 +50,7 @@ up = \drummode
 {
   sn16\< sn sn sn sn4\!
 
-  \upTheme
-  \upThemeA
+  \repeat percent 3 { \upTheme \upThemeA }
   \upThemeB
   \upThemeC
 }
@@ -70,9 +69,7 @@ downTheme =
 down = \drummode 
 {
   s2
-  \downTheme
-  \downTheme
-  \downTheme
+  \repeat percent 3 { \downTheme \downTheme }
 }
 
 \new DrumStaff 

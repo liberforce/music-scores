@@ -80,18 +80,33 @@ down = \drummode
   \repeat unfold 5 { \downTheme }
 }
 
+song = 
+\new DrumStaff 
+{
+  R1*3
+  r2
+
+  <<
+    \new DrumVoice { \voiceOne \up }
+    \new DrumVoice { \voiceTwo \down }
+  >>
+}
+
+% Layout
 \score
 {
-  \new DrumStaff 
-  {
-    R1*3
-    r2
-
-    <<
-      \new DrumVoice { \voiceOne \up }
-      \new DrumVoice { \voiceTwo \down }
-    >>
-  }
-  \midi { }
+  \song
   \layout { }
 }
+
+% MIDI
+% Unfolded repeats are required for MIDI when using multiple voices
+\score
+{
+  \unfoldRepeats
+  {
+    \song
+  }
+  \midi { }
+}
+

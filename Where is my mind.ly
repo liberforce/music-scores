@@ -83,6 +83,7 @@ down = \drummode
 song = 
 \new DrumStaff 
 {
+  \tempo 4=80 
   R1*3
   r2
 

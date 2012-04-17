@@ -80,13 +80,18 @@ down = \drummode
   \repeat unfold 5 { \downTheme }
 }
 
-\new DrumStaff 
+\score
 {
-  R1*3
-  r2
+  \new DrumStaff 
+  {
+    R1*3
+    r2
 
-  <<
-    \new DrumVoice { \voiceOne \up }
-    \new DrumVoice { \voiceTwo \down }
-  >>
+    <<
+      \new DrumVoice { \voiceOne \up }
+      \new DrumVoice { \voiceTwo \down }
+    >>
+  }
+  \midi { }
+  \layout { }
 }

@@ -50,9 +50,14 @@ up = \drummode
 {
   sn16\< sn sn sn sn4\!
 
-  \repeat percent 3 { \upTheme \upThemeA }
-  \upThemeB
-  \upThemeC
+  \repeat volta 8 { \upTheme }
+  \alternative
+  {
+    { \upThemeA }
+    { \upThemeB }
+    { \upThemeA }
+    { \upThemeC }
+  }
 }
 
 downHalfTheme = \drummode 
@@ -63,13 +68,16 @@ downHalfTheme = \drummode
 downTheme =
 {
   \downHalfTheme 
-  \downHalfTheme 
+  \downHalfTheme
 }
 
 down = \drummode 
 {
   s2
-  \repeat percent 3 { \downTheme \downTheme }
+
+  % Looks buggy: there should be 16 repeats, but the rendering doesn't follow
+  % voice 1
+  \repeat unfold 5 { \downTheme }
 }
 
 \new DrumStaff 

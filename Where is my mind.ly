@@ -71,6 +71,9 @@ up = \drummode
   % Measure 22
   \upFlaHalfTheme
   hh8 hh \acciaccatura sn8 sn8 toml8
+
+  % Measure 23
+  cymc4 r4 r2
 }
 
 downHalfTheme = \drummode 
@@ -98,6 +101,9 @@ down = \drummode
   % Measure 22
   \downHalfTheme
   bd8. bd16 s4
+
+  % Measure 23
+  bd4 s4 s2
 }
 
 song = 

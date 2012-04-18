@@ -46,6 +46,11 @@ upThemeC =
   \upHalfTheme \upHalfThemeC 
 }
 
+upFlaHalfTheme = \drummode 
+{
+  hh8 hh \acciaccatura sn8 sn4 
+}
+
 up = \drummode
 {
   sn16\< sn sn sn sn4\!
@@ -58,6 +63,14 @@ up = \drummode
     { \upThemeA }
     { \upThemeC }
   }
+
+  % Measure 21
+  \upHalfTheme
+  \upFlaHalfTheme
+
+  % Measure 22
+  \upFlaHalfTheme
+  hh8 hh \acciaccatura sn8 sn8 toml8
 }
 
 downHalfTheme = \drummode 
@@ -78,6 +91,13 @@ down = \drummode
   % Looks buggy: there should be 16 repeats, but the rendering doesn't follow
   % voice 1
   \repeat unfold 5 { \downTheme }
+
+  % Measure 21
+  \downTheme
+
+  % Measure 22
+  \downHalfTheme
+  bd8. bd16 s4
 }
 
 song = 

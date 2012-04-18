@@ -18,12 +18,12 @@ upHalfThemeA = \drummode
 
 upHalfThemeB = \drummode
 {
-  hh8 hh << sn hh >> cyms 
+  hh8 hh << sn hh >> rb 
 }
 
 upHalfThemeC = \drummode
 {
-  hh8 hh << sn hh >> hhho 
+  hh8 hh << sn hh >> cyms 
 }
 
 upTheme = 

@@ -78,8 +78,16 @@ up = \drummode
   % Measure 24
   cymc8 hh hh hh hh16[ sn hh8] sn16 sn sn8
 
-  % Measure 25
-  cymc8 hh hh hh \upHalfTheme
+  % Measures 25-36
+  
+  \repeat volta 6 { cymc8 hh hh hh \upHalfTheme }
+  \alternative
+  {
+    { \upThemeA }
+    { \upThemeB }
+    { \upThemeA }
+    { \upThemeC }
+  }
 }
 
 downHalfTheme = \drummode 
@@ -114,8 +122,10 @@ down = \drummode
   % Measure 24
   bd8[ bd sn8. bd16] r8 bd8 r4
 
-  % Measure 25
-  bd8 bd s4 bd8 bd s4
+  % Measures 25 - 36
+  % Looks buggy: there should be 16 repeats, but the rendering doesn't follow
+  % voice 1
+  \repeat unfold 5 { \downTheme }
 }
 
 song = 

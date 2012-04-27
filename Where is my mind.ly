@@ -98,6 +98,9 @@ up = \drummode
 
   % Measure 39
   cymc4 r4 r2
+
+  % Measure 40
+  cymc8 hh hh hh hh hh hh hh
 }
 
 downHalfTheme = \drummode 
@@ -146,6 +149,9 @@ down = \drummode
 
   % Measure 39
   bd4 s4 s2
+
+  % Measure 40
+  bd8[ bd sn8. bd16] r16 sn16[ bd bd sn8. sn16]
 }
 
 song = 

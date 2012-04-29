@@ -104,6 +104,10 @@ up = \drummode
 
   % Measures 41-42
   \repeat unfold 2 { hh8 hh hh hh hh hh hh hh }
+
+  % Measure 43
+  tommh16^"R"[ tommh8^"L" tomml16^"L" tomml8^"R" tomfh16^"R" tomfh16^"L"] r16
+  sn16[  \acciaccatura { sn[ sn] } sn tomml16] \stemDown { tomfh16[ tomfh \acciaccatura sn8 sn] } \stemNeutral
 }
 
 downHalfTheme = \drummode 

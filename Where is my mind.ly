@@ -101,6 +101,9 @@ up = \drummode
 
   % Measure 40
   cymc8 hh hh hh hh hh hh hh
+
+  % Measures 41-42
+  \repeat unfold 2 { hh8 hh hh hh hh hh hh hh }
 }
 
 downHalfTheme = \drummode 
@@ -150,8 +153,11 @@ down = \drummode
   % Measure 39
   bd4 s4 s2
 
-  % Measure 40
-  bd8[ bd sn8. bd16] r16 sn16[ bd bd sn8. sn16]
+  % Measures 40-41
+  \repeat unfold 2 { bd8[ bd sn8. bd16] r16 sn16[ bd bd sn8. sn16] }
+
+  % Measure 42
+  bd8[ bd sn8. bd16] r16 sn16[ bd bd] sn4
 }
 
 song = 

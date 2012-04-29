@@ -4362,7 +4362,7 @@ p, li { white-space: pre-wrap; }
         <Beam>97</Beam>
         <StemDirection>up</StemDirection>
         <Note>
-          <pitch>38</pitch>
+          <pitch>45</pitch>
           <tpc>16</tpc>
           </Note>
         </Chord>

@@ -125,7 +125,17 @@ up = \drummode
 
   % Measure 43
   tommh16^"R"[ tommh8^"L" tomml16^"L" tomml8^"R" tomfh16^"R" tomfh16^"L"] r16
-  sn16[  \acciaccatura { sn[ sn] } sn tomml16] \stemDown { tomfh16[ tomfh \acciaccatura sn8 sn] } \stemNeutral
+  sn16[  \acciaccatura { sn[ sn] } sn tomml16] \stemDown { tomfh16[ tomfh \acciaccatura sn8 sn] } \stemUp
+
+  % Measures 44-49
+  \repeat volta 5 { \upTheme }
+  \alternative
+  {
+    { \upThemeA }
+    { \upThemeB }
+    { \upThemeA }
+    { \upThemeC }
+  }
 }
 
 downHalfTheme = \drummode 
@@ -177,6 +187,11 @@ down = \drummode
 
   % Measure 42
   bd8[ bd sn8. bd16] r16 sn16[ bd bd] sn4
+
+  % Measures 43 - 48
+  % Looks buggy: there should be more repeats, but the rendering doesn't follow
+  % repeats from voice 1
+  \repeat unfold 5 { \downTheme }
 }
 
 song = 

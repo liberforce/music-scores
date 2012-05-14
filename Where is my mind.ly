@@ -51,6 +51,34 @@ upFlaHalfTheme = \drummode
   hh8 hh \acciaccatura sn8 sn4 
 }
 
+upBreakA = \drummode
+{
+  % Measure 21
+  \upHalfTheme
+  \upFlaHalfTheme
+
+  % Measure 22
+  \upFlaHalfTheme
+  hh8 hh \acciaccatura sn8 sn8 toml8
+
+  % Measure 23
+  cymc4 r4 r2
+}
+
+upBreakB = \drummode
+{
+  % Measure 37
+  \upHalfTheme
+  \upFlaHalfTheme
+
+  % Measure 38
+  \upFlaHalfTheme
+  \upFlaHalfTheme
+
+  % Measure 39
+  cymc4 r4 r2
+}
+
 up = \drummode
 {
   sn16\< sn sn sn sn4\!
@@ -64,16 +92,8 @@ up = \drummode
     { \upThemeC }
   }
 
-  % Measure 21
-  \upHalfTheme
-  \upFlaHalfTheme
-
-  % Measure 22
-  \upFlaHalfTheme
-  hh8 hh \acciaccatura sn8 sn8 toml8
-
-  % Measure 23
-  cymc4 r4 r2
+  % Measures 21-23
+  \upBreakA
 
   % Measure 24
   cymc8 hh hh hh hh16[ sn hh8] sn16 sn sn8
@@ -94,16 +114,8 @@ up = \drummode
     { \upThemeC }
   }
 
-  % Measure 37
-  \upHalfTheme
-  \upFlaHalfTheme
-
-  % Measure 38
-  \upFlaHalfTheme
-  \upFlaHalfTheme
-
-  % Measure 39
-  cymc4 r4 r2
+  % Measures 37-39
+  \upBreakB
 
   % Measure 40
   cymc8 hh hh hh hh hh hh hh

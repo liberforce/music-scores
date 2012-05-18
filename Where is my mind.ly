@@ -67,6 +67,12 @@ upBreakA = \drummode
 
 upBreakB = \drummode
 {
+  % Measure 24
+  cymc8 hh hh hh hh16[ sn hh8] sn16 sn sn8
+}
+
+upBreakC = \drummode
+{
   % Measure 37
   \upHalfTheme
   \upFlaHalfTheme
@@ -81,9 +87,6 @@ upBreakB = \drummode
 
 upB = \drummode
 {
-  % Measure 24
-  cymc8 hh hh hh hh16[ sn hh8] sn16 sn sn8
-
   % Measure 25
   cymc8 hh << hh sn >> hh \upHalfTheme
   
@@ -101,7 +104,7 @@ upB = \drummode
   }
 
   % Measures 37-39
-  \upBreakB
+  \upBreakC
 
   % Measure 40
   cymc8 hh hh hh hh hh hh hh
@@ -148,11 +151,14 @@ downBreakA = \drummode
   bd4
 }
 
-downB = \drummode
+downBreakB = \drummode
 {
   % Measure 24
   bd8[ bd sn8. bd16] r8 bd8 r4
+}
 
+downB = \drummode
+{
   % Measures 25 - 37
   % Looks buggy: there should be more repeats, but the rendering doesn't follow
   % repeats from voice 1
@@ -227,6 +233,14 @@ allBreakA = \drummode
   r4 r2
 }
 
+allBreakB = \drummode
+{
+  <<
+    \new DrumVoice { \voiceOne \upBreakB }
+    \new DrumVoice { \voiceTwo \downBreakB }
+  >>
+}
+
 song = 
 \new DrumStaff 
 {
@@ -244,6 +258,9 @@ song =
 
   % Measures 21-23
   \allBreakA
+
+  % Measure 24
+  \allBreakB
 
   <<
     \new DrumVoice { \voiceOne \upB }

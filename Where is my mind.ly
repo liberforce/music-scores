@@ -79,23 +79,6 @@ upBreakB = \drummode
   cymc4 r4 r2
 }
 
-upA = \drummode
-{
-  sn16\< sn sn sn sn4\!
-
-  \repeat volta 8 { \upTheme }
-  \alternative
-  {
-    { \upThemeA }
-    { \upThemeB }
-    { \upThemeA }
-    { \upThemeC }
-  }
-
-  % Measures 21-23
-  \upBreakA
-}
-
 upB = \drummode
 {
   % Measure 24
@@ -152,14 +135,8 @@ downTheme =
   \downHalfTheme
 }
 
-downA = \drummode 
+downBreakA = \drummode 
 {
-  s2
-
-  % Looks buggy: there should be 16 repeats, but the rendering doesn't follow
-  % voice 1
-  \repeat unfold 5 { \downTheme }
-
   % Measure 21
   \downTheme
 
@@ -211,16 +188,54 @@ song =
   % Measures 1-3
   R1*3
 
-  % Measure 4 (beginning)
+  % Measure 4
   r2
+  \new DrumVoice { \voiceOne \drummode { sn16\< sn sn sn sn4\! } }
 
-  <<
-    \new DrumVoice { \voiceOne \upA }
-    \new DrumVoice { \voiceTwo \downA }
-  >>
+  % Measures 5-20
+  \repeat volta 8
+  {
+    <<
+      \new DrumVoice { \voiceOne \upTheme }
+      \new DrumVoice { \voiceTwo \downTheme }
+    >>
+  }
+  \alternative
+  {
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeA }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeB }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeA }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeC }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+  }
 
-  % End of measure 23
-  r4 r2
+  % Measures 21-23
+  {
+    <<
+      \new DrumVoice { \voiceOne \upBreakA }
+      \new DrumVoice { \voiceTwo \downBreakA }
+    >>
+    r4 r2
+  }
 
   <<
     \new DrumVoice { \voiceOne \upB }

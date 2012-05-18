@@ -188,7 +188,10 @@ down = \drummode
   % Measure 42
   bd8[ bd sn8. bd16] r16 sn16[ bd bd] sn4
 
-  % Measures 43 - 48
+  % Measure 43
+  s1
+
+  % Measure 44 - 48
   % Looks buggy: there should be more repeats, but the rendering doesn't follow
   % repeats from voice 1
   \repeat unfold 5 { \downTheme }

@@ -180,19 +180,8 @@ downB = \drummode
   \repeat unfold 5 { \downTheme }
 }
 
-song = 
-\new DrumStaff 
+allThemeA = \drummode
 {
-  \tempo 4=80
-
-  % Measures 1-3
-  R1*3
-
-  % Measure 4
-  r2
-  \new DrumVoice { \voiceOne \drummode { sn16\< sn sn sn sn4\! } }
-
-  % Measures 5-20
   \repeat volta 8
   {
     <<
@@ -227,15 +216,34 @@ song =
       >>
     }
   }
+}
+
+allBreakA = \drummode
+{
+  <<
+    \new DrumVoice { \voiceOne \upBreakA }
+    \new DrumVoice { \voiceTwo \downBreakA }
+  >>
+  r4 r2
+}
+
+song = 
+\new DrumStaff 
+{
+  \tempo 4=80
+
+  % Measures 1-3
+  R1*3
+
+  % Measure 4
+  r2
+  \new DrumVoice { \voiceOne \drummode { sn16\< sn sn sn sn4\! } }
+
+  % Measures 5-20
+  \allThemeA
 
   % Measures 21-23
-  {
-    <<
-      \new DrumVoice { \voiceOne \upBreakA }
-      \new DrumVoice { \voiceTwo \downBreakA }
-    >>
-    r4 r2
-  }
+  \allBreakA
 
   <<
     \new DrumVoice { \voiceOne \upB }

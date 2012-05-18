@@ -61,8 +61,8 @@ upBreakA = \drummode
   \upFlaHalfTheme
   hh8 hh \acciaccatura sn8 sn8 toml8
 
-  % Measure 23
-  cymc4 r4 r2
+  % Measure 23 (beginning)
+  cymc4
 }
 
 upBreakB = \drummode
@@ -79,7 +79,7 @@ upBreakB = \drummode
   cymc4 r4 r2
 }
 
-up = \drummode
+upA = \drummode
 {
   sn16\< sn sn sn sn4\!
 
@@ -94,7 +94,10 @@ up = \drummode
 
   % Measures 21-23
   \upBreakA
+}
 
+upB = \drummode
+{
   % Measure 24
   cymc8 hh hh hh hh16[ sn hh8] sn16 sn sn8
 
@@ -149,7 +152,7 @@ downTheme =
   \downHalfTheme
 }
 
-down = \drummode 
+downA = \drummode 
 {
   s2
 
@@ -164,9 +167,12 @@ down = \drummode
   \downHalfTheme
   bd8. bd16 s4
 
-  % Measure 23
-  bd4 s4 s2
+  % Measure 23 (beginning)
+  bd4
+}
 
+downB = \drummode
+{
   % Measure 24
   bd8[ bd sn8. bd16] r8 bd8 r4
 
@@ -200,13 +206,25 @@ down = \drummode
 song = 
 \new DrumStaff 
 {
-  \tempo 4=80 
+  \tempo 4=80
+
+  % Measures 1-3
   R1*3
+
+  % Measure 4 (beginning)
   r2
 
   <<
-    \new DrumVoice { \voiceOne \up }
-    \new DrumVoice { \voiceTwo \down }
+    \new DrumVoice { \voiceOne \upA }
+    \new DrumVoice { \voiceTwo \downA }
+  >>
+
+  % End of measure 23
+  r4 r2
+
+  <<
+    \new DrumVoice { \voiceOne \upB }
+    \new DrumVoice { \voiceTwo \downB }
   >>
 }
 

@@ -51,7 +51,7 @@ upFlaHalfTheme = \drummode
   hh8 hh \acciaccatura sn8 sn4 
 }
 
-upBreakA = \drummode
+upSectionC = \drummode
 {
   % Measure 21
   \upHalfTheme
@@ -65,7 +65,7 @@ upBreakA = \drummode
   cymc4
 }
 
-upBreakB = \drummode
+upSectionD = \drummode
 {
   % Measure 24
   cymc8 hh hh hh hh16[ sn hh8] sn16 sn sn8
@@ -138,7 +138,7 @@ downTheme =
   \downHalfTheme
 }
 
-downBreakA = \drummode 
+downSectionC = \drummode 
 {
   % Measure 21
   \downTheme
@@ -151,7 +151,7 @@ downBreakA = \drummode
   bd4
 }
 
-downBreakB = \drummode
+downSectionD = \drummode
 {
   % Measure 24
   bd8[ bd sn8. bd16] r8 bd8 r4
@@ -186,7 +186,7 @@ downB = \drummode
   \repeat unfold 5 { \downTheme }
 }
 
-allThemeA = \drummode
+allSectionB = \drummode
 {
   \repeat volta 8
   {
@@ -224,20 +224,20 @@ allThemeA = \drummode
   }
 }
 
-allBreakA = \drummode
+allSectionC = \drummode
 {
   <<
-    \new DrumVoice { \voiceOne \upBreakA }
-    \new DrumVoice { \voiceTwo \downBreakA }
+    \new DrumVoice { \voiceOne \upSectionC }
+    \new DrumVoice { \voiceTwo \downSectionC }
   >>
   r4 r2
 }
 
-allBreakB = \drummode
+allSectionD = \drummode
 {
   <<
-    \new DrumVoice { \voiceOne \upBreakB }
-    \new DrumVoice { \voiceTwo \downBreakB }
+    \new DrumVoice { \voiceOne \upSectionD }
+    \new DrumVoice { \voiceTwo \downSectionD }
   >>
 }
 
@@ -254,13 +254,13 @@ song =
   \new DrumVoice { \voiceOne \drummode { sn16\< sn sn sn sn4\! } }
 
   % Measures 5-20
-  \allThemeA
+  \allSectionB
 
   % Measures 21-23
-  \allBreakA
+  \allSectionC
 
   % Measure 24
-  \allBreakB
+  \allSectionD
 
   <<
     \new DrumVoice { \voiceOne \upB }

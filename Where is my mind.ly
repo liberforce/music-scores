@@ -96,7 +96,7 @@ upBreakC = \drummode
   cymc4
 }
 
-upB = \drummode
+upSectionG = \drummode
 {
   % Measure 40
   cymc8 hh hh hh hh hh hh hh
@@ -106,8 +106,11 @@ upB = \drummode
 
   % Measure 43
   tommh16^"R"[ tommh8^"L" tomml16^"L" tomml8^"R" tomfh16^"R" tomfh16^"L"] r16
-  sn16[  \acciaccatura { sn[ sn] } sn tomml16] \stemDown { tomfh16[ tomfh \acciaccatura sn8 sn] } \stemUp
+  sn16^"L"[  \acciaccatura { sn[ sn] } sn^"L" tomml16^"R"] \stemDown { tomfh16[ tomfh \acciaccatura sn8 sn] } \stemUp
+}
 
+upB = \drummode
+{
   % Measures 44-49
   \repeat volta 5 { \upTheme }
   \alternative
@@ -162,7 +165,7 @@ downBreakC = \drummode
   bd4
 }
 
-downB = \drummode
+downSectionG = \drummode
 {
   % Measures 40-41
   \repeat unfold 2 { bd8[ bd sn8. bd16] r16 sn16[ bd bd sn8. sn16] }
@@ -172,7 +175,10 @@ downB = \drummode
 
   % Measure 43
   s1
+}
 
+downB = \drummode
+{
   % Measure 44 - 48
   % Looks buggy: there should be more repeats, but the rendering doesn't follow
   % repeats from voice 1
@@ -288,6 +294,14 @@ allSectionF = \drummode
   r4 r2
 }
 
+allSectionG = \drummode
+{
+  <<
+    \new DrumVoice { \voiceOne \upSectionG }
+    \new DrumVoice { \voiceTwo \downSectionG }
+  >>
+}
+
 song = 
 \new DrumStaff 
 {
@@ -309,16 +323,14 @@ song =
   % Measure 24
   \allSectionD
 
-  % Measure 25-36
+  % Measures 25-36
   \allSectionE
 
-  % Measure 37-39
+  % Measures 37-39
   \allSectionF
 
-  <<
-    \new DrumVoice { \voiceOne \upB }
-    \new DrumVoice { \voiceTwo \downB }
-  >>
+  % Measures 40-43
+  \allSectionG
 }
 
 % Layout

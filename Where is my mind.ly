@@ -2,8 +2,8 @@
 
 \header 
 {
-	title="Where is my mind"
-	composer="Pixies"
+  title="Where is my mind"
+  composer="Pixies"
 }
 
 upHalfTheme = \drummode
@@ -109,19 +109,6 @@ upSectionG = \drummode
   sn16^"L"[  \acciaccatura { sn[ sn] } sn^"L" tomml16^"R"] \stemDown { tomfh16[ tomfh \acciaccatura sn8 sn] } \stemUp
 }
 
-upB = \drummode
-{
-  % Measures 44-49
-  \repeat volta 5 { \upTheme }
-  \alternative
-  {
-    { \upThemeA }
-    { \upThemeB }
-    { \upThemeA }
-    { \upThemeC }
-  }
-}
-
 downHalfTheme = \drummode 
 {
   bd8 bd s4 
@@ -175,14 +162,6 @@ downSectionG = \drummode
 
   % Measure 43
   s1
-}
-
-downB = \drummode
-{
-  % Measure 44 - 48
-  % Looks buggy: there should be more repeats, but the rendering doesn't follow
-  % repeats from voice 1
-  \repeat unfold 5 { \downTheme }
 }
 
 allSectionB = \drummode

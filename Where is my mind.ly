@@ -336,6 +336,8 @@ allSectionH = \drummode
   }
 }
 
+allSectionI = \allSectionC
+
 song = 
 \new DrumStaff 
 {
@@ -368,6 +370,9 @@ song =
 
   % Measures 44-55
   \allSectionH
+
+  % Measures 56-58
+  \allSectionI
 }
 
 % Layout

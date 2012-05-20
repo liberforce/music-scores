@@ -109,6 +109,12 @@ upSectionG = \drummode
   sn16^"L"[  \acciaccatura { sn[ sn] } sn^"L" tomml16^"R"] \stemDown { tomfh16[ tomfh \acciaccatura sn8 sn] } \stemUp
 }
 
+upSectionJ = \drummode
+{
+  % Measure (idem 40)
+  cymc8 hh hh hh hh hh hh hh
+}
+
 downHalfTheme = \drummode 
 {
   bd8 bd s4 
@@ -152,10 +158,18 @@ downBreakC = \drummode
   bd4
 }
 
+downThemeTwo = \drummode
+{
+  bd8[ bd sn8. bd16] r16 sn16[ bd bd sn8. sn16]
+}
+
 downSectionG = \drummode
 {
-  % Measures 40-41
-  \repeat unfold 2 { bd8[ bd sn8. bd16] r16 sn16[ bd bd sn8. sn16] }
+  % Measure 40
+  \downThemeTwo
+  
+  % Measure 41
+  \downThemeTwo
 
   % Measure 42
   bd8[ bd sn8. bd16] r16 sn16[ bd bd] sn4
@@ -164,16 +178,10 @@ downSectionG = \drummode
   s1
 }
 
-downSectionH = \drummode
+downSectionJ = \drummode
 {
-  % Measures 40-41
-  \repeat unfold 2 { bd8[ bd sn8. bd16] r16 sn16[ bd bd sn8. sn16] }
-
-  % Measure 42
-  bd8[ bd sn8. bd16] r16 sn16[ bd bd] sn4
-
-  % Measure 43
-  s1
+  % Measure 59
+  \downThemeTwo
 }
 
 allSectionB = \drummode
@@ -338,6 +346,14 @@ allSectionH = \drummode
 
 allSectionI = \allSectionC
 
+allSectionJ = \drummode
+{
+  <<
+    \new DrumVoice { \voiceOne \upSectionJ }
+    \new DrumVoice { \voiceTwo \downSectionJ }
+  >>
+}
+
 song = 
 \new DrumStaff 
 {
@@ -373,6 +389,9 @@ song =
 
   % Measures 56-58
   \allSectionI
+
+  % Measure 59
+  \allSectionJ
 }
 
 % Layout

@@ -204,6 +204,16 @@ downSectionJ = \drummode
   \downThemeTwo
 }
 
+allSectionA = \drummode
+{
+  % Measures 1-3
+  R1*3
+
+  % Measure 4
+  r2
+  \new DrumVoice { \voiceOne \drummode { sn16\< sn sn sn sn4\! } }
+}
+
 allSectionB = \drummode
 {
   \repeat volta 8
@@ -393,13 +403,12 @@ allSectionK = \drummode
     }
     {
       <<
-	\new DrumVoice { \voiceOne hhho8 hhho }
-	\new DrumVoice { \voiceTwo \downHalfTheme }
+	\new DrumVoice { \voiceOne hhho8[ hhho] }
+	\new DrumVoice { \voiceTwo bd8 bd }
       >>
+      r4 r2 
     }
   }
-
-  r4 r2
 }
 
 song = 
@@ -407,12 +416,8 @@ song =
 {
   \tempo 4=80
 
-  % Measures 1-3
-  R1*3
-
-  % Measure 4
-  r2
-  \new DrumVoice { \voiceOne \drummode { sn16\< sn sn sn sn4\! } }
+  % Measures 1-4
+  \allSectionA
 
   % Measures 5-20
   \allSectionB
@@ -443,6 +448,8 @@ song =
 
   % Measure 60-73
   \allSectionK
+
+  \bar "|."
 }
 
 % Layout

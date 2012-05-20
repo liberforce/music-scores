@@ -59,12 +59,12 @@ upThemeD =
 
 upHalfThemeThreeA = \drummode
 {
-  hh8 hh << sn hh >> hh16 hh
+  hhho8 hhho << sn hhho >> hhho16 hhho
 }
 
 upHalfThemeThreeB = \drummode
 {
-  hh8 hh << sn hh >> hh
+  hhho8 hhho << sn hhho >> hhho
 }
 
 upThemeThreeA = \drummode
@@ -131,8 +131,8 @@ upSectionG = \drummode
 
 upSectionJ = \drummode
 {
-  % Measure (idem 40)
-  cymc8 hh hh hh hh hh hh hh
+  % Measure 59
+  cymc8 hhho hhho hhho hhho hhho hhho hhho
 }
 
 downHalfTheme = \drummode 
@@ -393,7 +393,7 @@ allSectionK = \drummode
     }
     {
       <<
-	\new DrumVoice { \voiceOne hh8 hh }
+	\new DrumVoice { \voiceOne hhho8 hhho }
 	\new DrumVoice { \voiceTwo \downHalfTheme }
       >>
     }

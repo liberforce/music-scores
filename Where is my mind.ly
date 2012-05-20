@@ -26,6 +26,11 @@ upHalfThemeC = \drummode
   hh8 hh << sn hh >> cyms 
 }
 
+upHalfThemeD = \drummode
+{
+  cymc8 hh << sn hh >> hh 
+}
+
 upTheme = 
 {
   \upHalfTheme \upHalfTheme
@@ -44,6 +49,12 @@ upThemeB =
 upThemeC = 
 {
   \upHalfTheme \upHalfThemeC 
+}
+
+% Starts with a crash
+upThemeD = 
+{
+  \upHalfThemeD \upHalfTheme 
 }
 
 upFlaHalfTheme = \drummode 
@@ -87,22 +98,6 @@ upBreakC = \drummode
 
 upB = \drummode
 {
-  % Measure 25
-  cymc8 hh << hh sn >> hh \upHalfTheme
-  
-  % Measure 26
-  \upThemeA
-
-  % Measures 27-36
-  \repeat volta 5 { \upTheme }
-  \alternative
-  {
-    { \upThemeA }
-    { \upThemeB }
-    { \upThemeA }
-    { \upThemeC }
-  }
-
   % Measures 37-39
   \upBreakC
 
@@ -159,10 +154,8 @@ downSectionD = \drummode
 
 downB = \drummode
 {
-  % Measures 25 - 37
-  % Looks buggy: there should be more repeats, but the rendering doesn't follow
-  % repeats from voice 1
-  \repeat unfold 8 { \downTheme }
+  % Measure 37
+  \downTheme
 
   % Measure 38
   \downHalfTheme
@@ -241,6 +234,49 @@ allSectionD = \drummode
   >>
 }
 
+allSectionE = \drummode
+{
+  <<
+    \new DrumVoice { \voiceOne \upThemeD \upThemeA }
+    \new DrumVoice { \voiceTwo \downTheme \downTheme }
+  >>
+
+  \repeat volta 5
+  {
+    <<
+      \new DrumVoice { \voiceOne \upTheme }
+      \new DrumVoice { \voiceTwo \downTheme }
+    >>
+  }
+  \alternative
+  {
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeA }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeB }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeA }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeC }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+  }
+}
+
 song = 
 \new DrumStaff 
 {
@@ -261,6 +297,9 @@ song =
 
   % Measure 24
   \allSectionD
+
+  % Measure 25-36
+  \allSectionE
 
   <<
     \new DrumVoice { \voiceOne \upB }

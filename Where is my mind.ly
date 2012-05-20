@@ -164,6 +164,18 @@ downSectionG = \drummode
   s1
 }
 
+downSectionH = \drummode
+{
+  % Measures 40-41
+  \repeat unfold 2 { bd8[ bd sn8. bd16] r16 sn16[ bd bd sn8. sn16] }
+
+  % Measure 42
+  bd8[ bd sn8. bd16] r16 sn16[ bd bd] sn4
+
+  % Measure 43
+  s1
+}
+
 allSectionB = \drummode
 {
   \repeat volta 8
@@ -281,6 +293,49 @@ allSectionG = \drummode
   >>
 }
 
+allSectionH = \drummode
+{
+  <<
+    \new DrumVoice { \voiceOne \upThemeD \upThemeA }
+    \new DrumVoice { \voiceTwo \downTheme \downTheme }
+  >>
+
+  \repeat volta 5
+  {
+    <<
+      \new DrumVoice { \voiceOne \upTheme }
+      \new DrumVoice { \voiceTwo \downTheme }
+    >>
+  }
+  \alternative
+  {
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeA }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+    {
+      <<
+	\new DrumVoice { \voiceOne \upTheme }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeA }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeC }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+  }
+}
+
 song = 
 \new DrumStaff 
 {
@@ -310,6 +365,9 @@ song =
 
   % Measures 40-43
   \allSectionG
+
+  % Measures 44-55
+  \allSectionH
 }
 
 % Layout

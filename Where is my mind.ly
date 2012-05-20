@@ -57,6 +57,26 @@ upThemeD =
   \upHalfThemeD \upHalfTheme 
 }
 
+upHalfThemeThreeA = \drummode
+{
+  hh8 hh << sn hh >> hh16 hh
+}
+
+upHalfThemeThreeB = \drummode
+{
+  hh8 hh << sn hh >> hh
+}
+
+upThemeThreeA = \drummode
+{
+  \upHalfThemeThreeA \upHalfThemeThreeB
+}
+
+upThemeThreeB = \drummode
+{
+  \upHalfThemeThreeB \upHalfThemeThreeA
+}
+
 upFlaHalfTheme = \drummode 
 {
   hh8 hh \acciaccatura sn8 sn4 
@@ -354,6 +374,24 @@ allSectionJ = \drummode
   >>
 }
 
+allSectionK = \drummode
+{
+  \repeat unfold 6
+  {
+    <<
+      \new DrumVoice { \voiceOne \upThemeThreeA \upThemeThreeB }
+      \new DrumVoice { \voiceTwo \downTheme \downTheme }
+    >>
+  }
+
+  <<
+    \new DrumVoice { \voiceOne \upThemeThreeA hh8 hh }
+    \new DrumVoice { \voiceTwo \downTheme \downHalfTheme }
+  >>
+
+  r4 r2
+}
+
 song = 
 \new DrumStaff 
 {
@@ -392,6 +430,9 @@ song =
 
   % Measure 59
   \allSectionJ
+
+  % Measure 60-73
+  \allSectionK
 }
 
 % Layout

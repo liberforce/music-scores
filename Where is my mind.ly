@@ -124,6 +124,8 @@ upSectionG = \drummode
   % Measures 41-42
   \repeat unfold 2 { hh8 hh hh hh hh hh hh hh }
 
+  \break
+
   % Measure 43
   tommh16^"R"[ tommh8^"L" tomml16^"L" tomml8^"R" tomfh16^"R" tomfh16^"L"] r16
   sn16^"L"[  \acciaccatura { sn[ sn] } sn^"L" tomml16^"R"] \stemDown { tomfh16[ tomfh \acciaccatura sn8 sn] } \stemUp
@@ -403,7 +405,7 @@ allSectionK = \drummode
     }
     {
       <<
-	\new DrumVoice { \voiceOne hhho8[ hhho] }
+	\new DrumVoice { \voiceOne hhho8 hhho }
 	\new DrumVoice { \voiceTwo bd8 bd }
       >>
       r4 r2 
@@ -421,18 +423,21 @@ song =
 
   % Measures 5-20
   \allSectionB
+  \break
 
   % Measures 21-23
   \allSectionC
 
   % Measure 24
   \allSectionD
+  \break
 
   % Measures 25-36
   \allSectionE
 
   % Measures 37-39
   \allSectionF
+  \break
 
   % Measures 40-43
   \allSectionG

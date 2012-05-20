@@ -376,18 +376,28 @@ allSectionJ = \drummode
 
 allSectionK = \drummode
 {
-  \repeat unfold 6
+  \repeat volta 7
   {
     <<
-      \new DrumVoice { \voiceOne \upThemeThreeA \upThemeThreeB }
-      \new DrumVoice { \voiceTwo \downTheme \downTheme }
+      \new DrumVoice { \voiceOne \upThemeThreeA }
+      \new DrumVoice { \voiceTwo \downTheme }
     >>
   }
-
-  <<
-    \new DrumVoice { \voiceOne \upThemeThreeA hh8 hh }
-    \new DrumVoice { \voiceTwo \downTheme \downHalfTheme }
-  >>
+  \alternative
+  {
+    {
+      <<
+	\new DrumVoice { \voiceOne \upThemeThreeB }
+	\new DrumVoice { \voiceTwo \downTheme }
+      >>
+    }
+    {
+      <<
+	\new DrumVoice { \voiceOne hh8 hh }
+	\new DrumVoice { \voiceTwo \downHalfTheme }
+      >>
+    }
+  }
 
   r4 r2
 }

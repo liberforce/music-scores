@@ -92,15 +92,12 @@ upBreakC = \drummode
   \upFlaHalfTheme
   \upFlaHalfTheme
 
-  % Measure 39
-  cymc4 r4 r2
+  % Measure 39 (beginning)
+  cymc4
 }
 
 upB = \drummode
 {
-  % Measures 37-39
-  \upBreakC
-
   % Measure 40
   cymc8 hh hh hh hh hh hh hh
 
@@ -152,7 +149,7 @@ downSectionD = \drummode
   bd8[ bd sn8. bd16] r8 bd8 r4
 }
 
-downB = \drummode
+downBreakC = \drummode
 {
   % Measure 37
   \downTheme
@@ -161,9 +158,12 @@ downB = \drummode
   \downHalfTheme
   bd4 s4
 
-  % Measure 39
-  bd4 s4 s2
+  % Measure 39 (beginning)
+  bd4
+}
 
+downB = \drummode
+{
   % Measures 40-41
   \repeat unfold 2 { bd8[ bd sn8. bd16] r16 sn16[ bd bd sn8. sn16] }
 
@@ -277,6 +277,17 @@ allSectionE = \drummode
   }
 }
 
+allSectionF = \drummode
+{
+  <<
+    \new DrumVoice { \voiceOne \upBreakC }
+    \new DrumVoice { \voiceTwo \downBreakC }
+  >>
+
+  % Measure 39 (end)
+  r4 r2
+}
+
 song = 
 \new DrumStaff 
 {
@@ -300,6 +311,9 @@ song =
 
   % Measure 25-36
   \allSectionE
+
+  % Measure 37-39
+  \allSectionF
 
   <<
     \new DrumVoice { \voiceOne \upB }

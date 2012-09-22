@@ -24,7 +24,7 @@ allSectionB = \drummode
   << 
     \new DrumVoice {
       \voiceOne
-      cymc4 cymr8 cymr cymr cymr cymr cymr 
+      cymc4 <<cymr8 sn8>> cymr cymr cymr <<cymr sn>> cymr 
     }
     \new DrumVoice {
       \voiceTwo 

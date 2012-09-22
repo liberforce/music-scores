@@ -19,12 +19,16 @@ allSectionA = \drummode
 allSectionB = \drummode
 {
   % Measure 6
+  % We can't use short polyphonic notation because it won't produce MIDI
+  % http://code.google.com/p/lilypond/issues/detail?id=2022
   << 
-    \voiceOne {
+    \new DrumVoice {
+      \voiceOne
       cymc4 cymr8 cymr cymr cymr cymr cymr 
-    } \\
-    \voiceTwo {
-      bd4 sn4 bd8 bd sn bd
+    }
+    \new DrumVoice {
+      \voiceTwo 
+      bd4 s4 bd8 bd s8 bd
     }
   >>
 }

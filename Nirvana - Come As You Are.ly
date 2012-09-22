@@ -13,7 +13,20 @@ allSectionA = \drummode
 
   % Measure 5
   r2 r8 
-  tomfl8 < tomfl toml > tomfl8
+  tomfl8 < tomfl toml > tomfl8 
+}
+
+allSectionB = \drummode
+{
+  % Measure 6
+  << 
+    \voiceOne {
+      cymc4 cymr8 cymr cymr cymr cymr cymr 
+    } \\
+    \voiceTwo {
+      bd4 sn4 bd8 bd sn bd
+    }
+  >>
 }
 
 song = 
@@ -21,8 +34,11 @@ song =
 {
   \tempo 4=120
 
-  % Measures 1-4
+  % Measures 1-5
   \allSectionA
+
+  % Measures 6
+  \allSectionB
 
   \bar "|."
 }

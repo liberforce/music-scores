@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.15.31"
 
 \header 
 {
@@ -128,7 +128,7 @@ upSectionG = \drummode
 
   % Measure 43
   tommh16^"R"[ tommh8^"L" tomml16^"L" tomml8^"R" tomfh16^"R" tomfh16^"L"] r16
-  sn16^"L"[  \acciaccatura { sn[ sn] } sn^"L" tomml16^"R"] \stemDown { tomfh16[ tomfh \acciaccatura sn8 sn] } \stemUp
+  sn16\<^"L"[  \acciaccatura { sn[ sn] } sn^"L" tomml16^"R"] \stemDown { tomfh16[ tomfh \acciaccatura sn8 sn]\! } \stemUp
 }
 
 upSectionJ = \drummode

@@ -24,13 +24,34 @@ allSectionB = \drummode
   << 
     \new DrumVoice {
       \voiceOne
-      | cymc4 <<cymr8 sn8>> cymr cymr cymr <<cymr sn>> cymr
-      | cymr cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+      | cymc4    <<cymr8 sn8>> cymr cymr cymr <<cymr sn>> cymr
+      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+      | cymc8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+
     }
     \new DrumVoice {
       \voiceTwo 
       | bd4 s4 bd8 bd s bd
-      | bd bd s bd s bd
+      | bd8 bd s   bd s bd s bd
+      | bd4 s4 bd8 bd s bd
+      | bd8 bd s   bd s bd s bd
+      | bd4 s4 bd8 bd s bd
+      | bd8 bd s   bd s bd s bd
+      | bd4 s4 bd8 bd s bd
+      | bd8 bd s   bd s bd s bd
+      | bd4 s4 bd8 bd s bd
+      | bd8 bd s   bd s bd s bd
+      | bd4 s4 bd8 bd s bd
+      | bd8 bd s   bd s bd s bd
     }
   >>
 }

@@ -6,6 +6,16 @@
   composer="Nirvana"
 }
 
+downThemeA = \drummode
+{
+  bd4 s4 bd8 bd s bd
+}
+
+downThemeB = \drummode
+{
+  bd8 bd s   bd s bd s bd
+}
+
 allSectionA = \drummode
 {
   % Measures 1-4
@@ -40,18 +50,18 @@ allSectionB = \drummode
     }
     \new DrumVoice {
       \voiceTwo 
-      | bd4 s4 bd8 bd s bd
-      | bd8 bd s   bd s bd s bd
-      | bd4 s4 bd8 bd s bd
-      | bd8 bd s   bd s bd s bd
-      | bd4 s4 bd8 bd s bd
-      | bd8 bd s   bd s bd s bd
-      | bd4 s4 bd8 bd s bd
-      | bd8 bd s   bd s bd s bd
-      | bd4 s4 bd8 bd s bd
-      | bd8 bd s   bd s bd s bd
-      | bd4 s4 bd8 bd s bd
-      | bd8 bd s   bd s bd s bd
+      \downThemeA
+      \downThemeB
+      \downThemeA
+      \downThemeB
+      \downThemeA
+      \downThemeB
+      \downThemeA
+      \downThemeB
+      \downThemeA
+      \downThemeB
+      \downThemeA
+      \downThemeB
     }
   >>
 }

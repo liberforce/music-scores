@@ -36,7 +36,7 @@ allIntro = \drummode
   R1*3
 
   r2 r8 
-  tomfl8 < tomfl toml > tomfl8 
+  tomfh8 < tomfh tomml > tomfh8 
 }
 
 allPreVerse = \drummode

@@ -420,6 +420,7 @@ song =
 
   % Measures 1-4
   \allSectionA
+  \break
 
   % Measures 5-20
   \allSectionB

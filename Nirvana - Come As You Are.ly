@@ -160,6 +160,48 @@ allChorusTwo = \drummode
     }
   >>
 }
+
+upBridgeA = \drummode
+{
+  cymc8 hhho <<hhho sn>> hhho hhho hhho <<hhho sn>> hhho
+}
+
+upBridgeB = \drummode
+{
+  cymc8 hhho <<hhho sn>> hhho hhho hhho <<hhho sn>> sn16->[ sn->]
+}
+
+upBridgeC = \drummode
+{
+  cymc8 hhho <<hhho sn>> hhho hhho hhho <<cymc sn>> hhho
+}
+
+downBridgeA = \drummode
+{
+  bd8 bd s4 bd8 bd s4
+}
+
+downBridgeB = \drummode
+{
+  bd8 bd s4 bd8 bd s bd
+}
+
+allBridgeOne = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \repeat volta 4 { \upBridgeA }
+      \alternative { \upBridgeB \upBridgeC }
+    }
+    \new DrumVoice {
+      \voiceTwo
+      \repeat volta 4 { \downBridgeA }
+      \alternative { \downBridgeA \downBridgeB }
+    }
+  >>
+}
+
 song = 
 \drums 
 {
@@ -187,6 +229,10 @@ song =
 
   \mark "Chorus 2"
   \allChorusTwo
+  \break
+
+  \mark "Bridge 1"
+  \allBridgeOne
 
   \bar "|."
 }

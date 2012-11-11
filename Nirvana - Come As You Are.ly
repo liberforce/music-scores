@@ -222,6 +222,23 @@ allPreSolo = \drummode
   >>
 }
 
+allSolo = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \set countPercentRepeats = ##t
+      \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
+      \repeat percent 8 { \upSolo \upChorusA }
+
+    }
+    \new DrumVoice {
+      \voiceTwo
+      \repeat percent 8 { \downThemeA \downThemeB }
+    }
+  >>
+}
+
 song = 
 \drums 
 {
@@ -257,6 +274,15 @@ song =
 
   \mark "Pre-Solo"
   \allPreSolo
+  \break
+
+  \mark "Solo"
+  \allSolo
+  \break
+
+  \mark "Chorus 3"
+  \allChorusTwo       % same as chorus 2
+  \break
 
   \bar "|."
 }

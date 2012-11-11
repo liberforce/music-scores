@@ -16,7 +16,22 @@ downThemeB = \drummode
   bd8 bd s   bd s bd s bd
 }
 
-allSectionA = \drummode
+upTheme = \drummode
+{
+  cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+}
+
+upThemeHeadingCrash = \drummode
+{
+  cymc8-> cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+}
+
+upThemeGhost = \drummode
+{
+  cymc8 cymr <<cymr sn>> cymr16 sn16 cymr8 cymr <<cymr sn>> cymr
+}
+
+allIntro = \drummode
 {
   % Measures 1-4
   R1*3
@@ -26,7 +41,7 @@ allSectionA = \drummode
   tomfl8 < tomfl toml > tomfl8 
 }
 
-allSectionB = \drummode
+allPreVerse = \drummode
 {
   % Measures 6-7
   % We can't use short polyphonic notation because it won't produce MIDI
@@ -34,19 +49,10 @@ allSectionB = \drummode
   << 
     \new DrumVoice {
       \voiceOne
-      | cymc4    <<cymr8 sn8>> cymr cymr cymr <<cymr sn>> cymr
-      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
-      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
-      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
-      | cymc8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
-      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
-      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
-      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
-      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
-      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
-      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
-      | cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
-
+      cymc4 <<cymr8 sn8>> cymr cymr cymr <<cymr sn>> cymr
+      \upTheme
+      \upTheme
+      \upTheme
     }
     \new DrumVoice {
       \voiceTwo 
@@ -54,10 +60,52 @@ allSectionB = \drummode
       \downThemeB
       \downThemeA
       \downThemeB
+    }
+  >>
+}
+
+allVerse = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \upThemeHeadingCrash
+      \upTheme
+      \upTheme
+      \upTheme
+
+      \upTheme
+      \upTheme
+      \upThemeGhost
+      \upTheme
+
+      \upThemeHeadingCrash
+      \upTheme
+      \upTheme
+      \upTheme
+
+      \upThemeHeadingCrash
+      \upTheme
+      \upThemeGhost
+      \upTheme
+    }
+    \new DrumVoice {
+      \voiceTwo 
       \downThemeA
       \downThemeB
       \downThemeA
       \downThemeB
+
+      \downThemeA
+      \downThemeB
+      \downThemeA
+      \downThemeB
+
+      \downThemeA
+      \downThemeB
+      \downThemeA
+      \downThemeB
+
       \downThemeA
       \downThemeB
       \downThemeA
@@ -72,10 +120,13 @@ song =
   \tempo 4=120
 
   % Measures 1-5
-  \allSectionA
+  \allIntro
 
-  % Measures 6
-  \allSectionB
+  % Measures 6-9
+  \allPreVerse
+
+  % Measures 10-25
+  \allVerse
 
   \bar "|."
 }

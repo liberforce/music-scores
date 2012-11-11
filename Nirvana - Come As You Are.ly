@@ -33,17 +33,14 @@ upThemeGhost = \drummode
 
 allIntro = \drummode
 {
-  % Measures 1-4
   R1*3
 
-  % Measure 5
   r2 r8 
   tomfl8 < tomfl toml > tomfl8 
 }
 
 allPreVerse = \drummode
 {
-  % Measures 6-7
   % We can't use short polyphonic notation because it won't produce MIDI
   % http://code.google.com/p/lilypond/issues/detail?id=2022
   << 
@@ -114,23 +111,75 @@ allVerse = \drummode
   >>
 }
 
+upChorusA = \drummode
+{
+  cymc4 <<cymc sn>> cymc <<cymc sn>>
+}
+
+upChorusB = \drummode
+{
+  cymc4 sn16-> sn sn sn sn16-> sn sn sn sn16-> sn sn sn
+}
+
+downChorusA = \drummode
+{
+  bd4 s4 bd8 bd8 s4
+}
+
+downChorusB = \drummode
+{
+  bd4 bd bd bd
+}
+
+allChorus = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \upChorusA
+      \upChorusB
+      \upChorusA
+      \upChorusB
+
+      \upChorusA
+      \upChorusB
+      \upChorusA
+      cymc4 sn16-> sn sn sn tommh tommh tomml tomfh \acciaccatura sn16 sn8
+    }
+    \new DrumVoice {
+      \voiceTwo
+      \downChorusA
+      \downChorusB
+      \downChorusA
+      \downChorusB
+
+      \downChorusA
+      \downChorusB
+      \downChorusA
+      bd4 s2 s8 bd8
+    }
+  >>
+}
+
 song = 
 \drums 
 {
   \tempo 4=120
 
-  % Measures 1-5
   \mark "Intro"
   \allIntro
   \break
 
-  % Measures 6-9
   \mark "Pre-Verse"
   \allPreVerse
+  \break
 
-  % Measures 10-25
   \mark "Verse"
   \allVerse
+  \break
+
+  \mark "Chorus"
+  \allChorus
 
   \bar "|."
 }

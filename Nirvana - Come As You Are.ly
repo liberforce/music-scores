@@ -202,6 +202,26 @@ allBridgeOne = \drummode
   >>
 }
 
+upSolo = \drummode
+{
+  cymc4 <<cymc8. sn8.>> < \parenthesize sn16 > cymc4 <<cymc4 sn>>
+}
+
+allPreSolo = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \repeat percent 2 { \upSolo \upChorusA }
+
+    }
+    \new DrumVoice {
+      \voiceTwo
+      \repeat percent 2 { \downThemeA \downThemeB }
+    }
+  >>
+}
+
 song = 
 \drums 
 {
@@ -233,6 +253,10 @@ song =
 
   \mark "Bridge 1"
   \allBridgeOne
+  \break
+
+  \mark "Pre-Solo"
+  \allPreSolo
 
   \bar "|."
 }

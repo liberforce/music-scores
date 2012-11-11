@@ -120,12 +120,16 @@ song =
   \tempo 4=120
 
   % Measures 1-5
+  \mark "Intro"
   \allIntro
+  \break
 
   % Measures 6-9
+  \mark "Pre-Verse"
   \allPreVerse
 
   % Measures 10-25
+  \mark "Verse"
   \allVerse
 
   \bar "|."

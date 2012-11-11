@@ -213,7 +213,6 @@ allPreSolo = \drummode
     \new DrumVoice {
       \voiceOne
       \repeat percent 2 { \upSolo \upChorusA }
-
     }
     \new DrumVoice {
       \voiceTwo
@@ -237,6 +236,51 @@ allSolo = \drummode
       \repeat percent 8 { \downThemeA \downThemeB }
     }
   >>
+}
+
+allBridgeTwo = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \repeat volta 6 { \upBridgeA }
+      \alternative { \upBridgeB \upBridgeC }
+    }
+    \new DrumVoice {
+      \voiceTwo
+      \repeat volta 6 { \downBridgeA }
+      \alternative { \downBridgeA \downBridgeB }
+    }
+  >>
+}
+
+upOutroEnd = \drummode
+{
+  cymc4 <<cymc sn>> <<cymc8 sn8>> sn8 cymc4
+}
+
+downOutroEnd = \drummode
+{
+  bd8 bd4 bd4. bd8 bd
+}
+
+allOutro = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \repeat volta 4 { \upSolo }
+      \alternative { \upChorusA \upOutroEnd }
+      cymc1
+    }
+    \new DrumVoice {
+      \voiceTwo
+      \repeat volta 4 { \downThemeA }
+      \alternative { \downThemeB \downOutroEnd }
+      bd1
+    }
+  >>
+  R1*2
 }
 
 song = 
@@ -283,6 +327,13 @@ song =
   \mark "Chorus 3"
   \allChorusTwo       % same as chorus 2
   \break
+  
+  \mark "Bridge 2"
+  \allBridgeTwo
+  \break
+
+  \mark "Outro"
+  \allOutro
 
   \bar "|."
 }

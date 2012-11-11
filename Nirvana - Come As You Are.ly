@@ -110,7 +110,7 @@ downChorusB = \drummode
   bd4 bd bd bd
 }
 
-allChorus = \drummode
+allChorusOne = \drummode
 {
   << 
     \new DrumVoice {
@@ -143,6 +143,23 @@ allVerseTwo = \drummode
   >>
 }
 
+allChorusTwo = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \repeat unfold 3 { \upChorusA \upChorusB }
+      \upChorusA
+      sn8-> s sn-> s sn-> s sn->
+    }
+    \new DrumVoice {
+      \voiceTwo
+      \repeat unfold 3 { \downChorusA \downChorusB }
+      \downChorusA
+      s8 bd s bd s bd s bd
+    }
+  >>
+}
 song = 
 \drums 
 {
@@ -160,12 +177,16 @@ song =
   \allVerseOne
   \break
 
-  \mark "Chorus"
-  \allChorus
+  \mark "Chorus 1"
+  \allChorusOne
   \break
 
   \mark "Verse 2"
   \allVerseTwo
+  \break
+
+  \mark "Chorus 2"
+  \allChorusTwo
 
   \bar "|."
 }

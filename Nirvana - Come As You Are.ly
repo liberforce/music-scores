@@ -23,7 +23,7 @@ upTheme = \drummode
 
 upThemeHeadingCrash = \drummode
 {
-  cymc8-> cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+  cymc8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
 }
 
 upThemeGhost = \drummode

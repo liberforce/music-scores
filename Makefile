@@ -1,2 +1,3 @@
 all:
-	lilypond "Nirvana - Come As You Are.ly"
+	lilypond --pdf "Nirvana - Come As You Are.ly"
+	evince "Nirvana - Come As You Are.pdf" &

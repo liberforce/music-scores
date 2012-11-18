@@ -8,27 +8,27 @@
 
 downThemeA = \drummode
 {
-  bd4 s4 bd8 bd s bd
+  bd4 sn bd8 bd sn bd
 }
 
 downThemeB = \drummode
 {
-  bd8 bd s   bd s bd s bd
+  bd8 bd sn bd r bd sn bd
 }
 
 upTheme = \drummode
 {
-  cymr8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+  cymr8 cymr cymr cymr cymr cymr cymr cymr
 }
 
 upThemeHeadingCrash = \drummode
 {
-  cymc8 cymr <<cymr sn>> cymr cymr cymr <<cymr sn>> cymr
+  cymc8 cymr cymr cymr cymr cymr cymr cymr
 }
 
-upThemeGhost = \drummode
+downGhostThemeA = \drummode
 {
-  cymr8 cymr <<cymr sn>> cymr16 sn16 cymr8 cymr <<cymr sn>> cymr
+  bd4 sn8. \parenthesize sn16 bd8 bd sn bd
 }
 
 allIntro = \drummode
@@ -46,7 +46,7 @@ allPreVerse = \drummode
   << 
     \new DrumVoice {
       \voiceOne
-      cymc4 <<cymr8 sn8>> cymr cymr cymr <<cymr sn>> cymr
+      cymc4 cymr8 cymr cymr cymr cymr cymr
       \upTheme
       \upTheme
       \upTheme
@@ -70,7 +70,7 @@ allVerseOne = \drummode
 
       \upTheme
       \upTheme
-      \upThemeGhost
+      \upTheme %\upThemeGhost
       \upTheme
 
       \upThemeHeadingCrash
@@ -80,12 +80,30 @@ allVerseOne = \drummode
 
       \upThemeHeadingCrash
       \upTheme
-      \upThemeGhost
+      \upTheme %\upThemeGhost
       \upTheme
     }
     \new DrumVoice {
       \voiceTwo 
-      \repeat unfold 8 { \downThemeA \downThemeB }
+      \downThemeA
+      \downThemeB
+      \downThemeA
+      \downThemeB
+
+      \downThemeA
+      \downThemeB
+      \downGhostThemeA
+      \downThemeB
+
+      \downThemeA
+      \downThemeB
+      \downThemeA
+      \downThemeB
+
+      \downThemeA
+      \downThemeB
+      \downGhostThemeA
+      \downThemeB
     }
   >>
 }

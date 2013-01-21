@@ -6,19 +6,35 @@
   composer="Black Sabbath"
 }
 
-downTheme = \drummode
-{
-  bd4 sn bd8 bd sn bd
-}
 
 upTheme = \drummode
 {
-  hh hh hh hh
+  hh4 hh hh hh
+}
+
+downTheme = \drummode
+{
+  bd4 sn bd sn
 }
 
 upThemeHeadingCrash = \drummode
 {
   cymc4 hh hh hh
+}
+
+upThemeEndingA = \drummode
+{
+  hh4 hh hh s
+}
+
+downThemeEndingA = \drummode
+{
+  bd4 sn4 bd8 sn16 sn16 sn4
+}
+
+upThemeEndingB = \drummode
+{
+  cymc8 cymc4. cymc4 \acciaccatura sn16 sn4
 }
 
 allIntro = \drummode
@@ -27,23 +43,26 @@ allIntro = \drummode
   \acciaccatura sn16 sn4
 }
 
-%allPreVerse = \drummode
-%{
-%  << 
-%    \new DrumVoice {
-%      \voiceOne
-%      cymc4 cymr8 cymr cymr cymr cymr cymr
-%      \upTheme
-%      \upTheme
-%      \upTheme
-%    }
-%    \new DrumVoice {
-%      \voiceTwo 
-%      \repeat unfold 2 { \downThemeA \downThemeB }
-%    }
-%  >>
-%}
-%
+allPreVerse = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \upThemeHeadingCrash
+      \upTheme
+      \upThemeHeadingCrash
+      \upThemeEndingA
+    }
+    \new DrumVoice {
+      \voiceTwo 
+      \downTheme
+      \downTheme
+      \downTheme
+      \downThemeEndingA
+    }
+  >>
+}
+
 %allVerseOne = \drummode
 %{
 %  << 
@@ -296,8 +315,8 @@ song =
   \allIntro
   \break
 
-%  \mark "Pre-Verse"
-%  \allPreVerse
+  \mark "Pre-Verse"
+  \allPreVerse
 %  \break
 %
 %  \mark "Verse 1"

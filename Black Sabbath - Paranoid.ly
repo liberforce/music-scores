@@ -34,7 +34,12 @@ downThemeEndingA = \drummode
 
 upThemeEndingB = \drummode
 {
-  cymc8 cymc4. cymc4 \acciaccatura sn16 sn4
+  cymc8 cymc4. cymc4 s4
+}
+
+downThemeEndingB = \drummode
+{
+  bd8 bd4. bd4 \acciaccatura sn16 sn4
 }
 
 allIntro = \drummode
@@ -63,56 +68,37 @@ allPreVerse = \drummode
   >>
 }
 
-%allVerseOne = \drummode
-%{
-%  << 
-%    \new DrumVoice {
-%      \voiceOne
-%      \upThemeHeadingCrash
-%      \upTheme
-%      \upTheme
-%      \upTheme
-%
-%      \upTheme
-%      \upTheme
-%      \upTheme %\upThemeGhost
-%      \upTheme
-%
-%      \upThemeHeadingCrash
-%      \upTheme
-%      \upTheme
-%      \upTheme
-%
-%      \upThemeHeadingCrash
-%      \upTheme
-%      \upTheme %\upThemeGhost
-%      \upTheme
-%    }
-%    \new DrumVoice {
-%      \voiceTwo 
-%      \downThemeA
-%      \downThemeB
-%      \downThemeA
-%      \downThemeB
-%
-%      \downThemeA
-%      \downThemeB
-%      \downGhostThemeA
-%      \downThemeB
-%
-%      \downThemeA
-%      \downThemeB
-%      \downThemeA
-%      \downThemeB
-%
-%      \downThemeA
-%      \downThemeB
-%      \downGhostThemeA
-%      \downThemeB
-%    }
-%  >>
-%}
-%
+allVerseOne = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \upThemeHeadingCrash
+      \upTheme
+      \upTheme
+      \upThemeEndingB
+      \break
+
+      \upTheme
+      \upTheme
+      \upTheme
+      \upThemeEndingB
+    }
+    \new DrumVoice {
+      \voiceTwo 
+      \downTheme
+      \downTheme
+      \downTheme
+      \downThemeEndingB
+
+      \downTheme
+      \downTheme
+      \downTheme
+      \downThemeEndingB
+    }
+  >>
+}
+
 %upChorusA = \drummode
 %{
 %  cymc4 <<cymc sn>> cymc <<cymc sn>>
@@ -317,11 +303,11 @@ song =
 
   \mark "Pre-Verse"
   \allPreVerse
-%  \break
-%
-%  \mark "Verse 1"
-%  \allVerseOne
-%  \break
+  \break
+
+  \mark "Verse 1"
+  \allVerseOne
+  \break
 %
 %  \mark "Chorus 1"
 %  \allChorusOne

@@ -17,7 +17,7 @@ downTheme = \drummode
   bd4 sn bd sn
 }
 
-upThemeHeadingCrash = \drummode
+upThemeHeadingCrashA = \drummode
 {
   cymc4 hh hh hh
 }
@@ -53,9 +53,9 @@ allPreVerse = \drummode
   << 
     \new DrumVoice {
       \voiceOne
-      \upThemeHeadingCrash
+      \upThemeHeadingCrashA
       \upTheme
-      \upThemeHeadingCrash
+      \upThemeHeadingCrashA
       \upThemeEndingA
     }
     \new DrumVoice {
@@ -73,7 +73,7 @@ allVerseOne = \drummode
   << 
     \new DrumVoice {
       \voiceOne
-      \upThemeHeadingCrash
+      \upThemeHeadingCrashA
       \upTheme
       \upTheme
       \upThemeEndingB
@@ -99,59 +99,49 @@ allVerseOne = \drummode
   >>
 }
 
-%upChorusA = \drummode
-%{
-%  cymc4 <<cymc sn>> cymc <<cymc sn>>
-%}
-%
-%upChorusB = \drummode
-%{
-%  cymc4 sn16-> sn sn sn sn16-> sn sn sn sn16-> sn sn sn
-%}
-%
-%downChorusA = \drummode
-%{
-%  bd4 s4 bd8 bd8 s4
-%}
-%
-%downChorusB = \drummode
-%{
-%  bd4 bd bd bd
-%}
-%
-%allChorusOne = \drummode
-%{
-%  << 
-%    \new DrumVoice {
-%      \voiceOne
-%      \repeat unfold 3 { \upChorusA \upChorusB }
-%      \upChorusA
-%      cymc4 sn16-> sn sn sn tommh tommh tomml tomfh \acciaccatura sn16 sn8
-%    }
-%    \new DrumVoice {
-%      \voiceTwo
-%      \repeat unfold 3 { \downChorusA \downChorusB }
-%      \downChorusA
-%      bd4 s2 s8 bd8
-%    }
-%  >>
-%}
-%
-%allVerseTwo = \drummode
-%{
-%  << 
-%    \new DrumVoice {
-%      \voiceOne
-%      \upThemeHeadingCrash
-%      \repeat unfold 7 { \upTheme }
-%    }
-%    \new DrumVoice {
-%      \voiceTwo 
-%      \repeat unfold 4 { \downThemeA \downThemeB }
-%    }
-%  >>
-%}
-%
+upThemeDoubleCrash = \drummode
+{
+  <cymc hh>4 hh <cymc hh>4 hh
+}
+
+upThemeHeadingCrashB = \drummode
+{
+  <cymc hh>4 hh hh hh
+}
+
+allRiffOne = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \upTheme
+      \upThemeDoubleCrash
+      \upThemeHeadingCrashB
+      \upThemeEndingA
+      \break
+
+      \upThemeHeadingCrashB
+      \upThemeDoubleCrash
+      \upThemeHeadingCrashB
+      \upThemeEndingA
+    }
+    \new DrumVoice {
+      \voiceTwo 
+      \downTheme
+      \downTheme
+      \downTheme
+      \downThemeEndingA
+
+      \downTheme
+      \downTheme
+      \downTheme
+      \downThemeEndingA
+    }
+  >>
+}
+
+allVerseTwo = \allVerseOne
+
 %allChorusTwo = \drummode
 %{
 %  << 
@@ -308,14 +298,14 @@ song =
   \mark "Verse 1"
   \allVerseOne
   \break
-%
-%  \mark "Chorus 1"
-%  \allChorusOne
-%  \break
-%
-%  \mark "Verse 2"
-%  \allVerseTwo
-%  \break
+
+  \mark "Riff 1"
+  \allRiffOne
+  \break
+
+  \mark "Verse 2"
+  \allVerseTwo
+  \break
 %
 %  \mark "Chorus 2"
 %  \allChorusTwo

@@ -142,6 +142,36 @@ allRiffOne = \drummode
 
 allVerseTwo = \allVerseOne
 
+allRiffTwo = \drummode
+{
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \upTheme
+      \upThemeHeadingCrashA
+      \upThemeHeadingCrashA
+      \upTheme
+      \break
+
+      \upThemeHeadingCrashA
+      \upThemeEndingA
+      \upThemeHeadingCrashA
+      hh4 s4 s2
+    }
+    \new DrumVoice {
+      \voiceTwo 
+      \downTheme
+      \downTheme
+      \downTheme
+      bd4 sn bd8. sn16 sn4
+
+      \downTheme
+      bd4 sn bd8. sn16 sn4
+      \downTheme
+      bd8 sn16 sn sn sn sn sn <sn bd>16 sn16 sn sn sn4
+    }
+  >>
+}
 %allChorusTwo = \drummode
 %{
 %  << 
@@ -306,11 +336,11 @@ song =
   \mark "Verse 2"
   \allVerseTwo
   \break
-%
-%  \mark "Chorus 2"
-%  \allChorusTwo
-%  \break
-%
+
+  \mark "Riff 2"
+  \allRiffTwo
+  \break
+
 %  \mark "Bridge 1"
 %  \allBridgeOne
 %  \break

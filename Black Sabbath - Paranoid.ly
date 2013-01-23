@@ -173,12 +173,37 @@ allVerseThree = \drummode
   >>
 }
 
-allRiffTwo = \drummode
-{
-}
+allRiffTwo = \allVerseOne
 
 allVerseFour = \drummode
 {
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \upTheme
+      \upTheme
+      \upTheme
+      \upThemeEndingB
+      \break
+
+      \upTheme
+      \upTheme
+      \upTheme
+      \upThemeEndingB
+    }
+    \new DrumVoice {
+      \voiceTwo 
+      \downTheme
+      \downTheme
+      \downTheme
+      \downThemeEndingB
+
+      \downTheme
+      \downTheme
+      bd4 sn <bd sn> sn
+      \downThemeEndingB
+    }
+  >>
 }
 
 allSolo = \drummode
@@ -208,7 +233,7 @@ allOutro = \drummode
 song = 
 \drums 
 {
-  \tempo 4=120
+  \tempo 4=164
 
   \mark "Intro"
   \allIntro

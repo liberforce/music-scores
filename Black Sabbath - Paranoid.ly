@@ -208,6 +208,29 @@ allVerseFour = \drummode
 
 allSolo = \drummode
 {
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \repeat percent 4
+      {
+	\upTheme
+	\upTheme
+	\upTheme
+	\upThemeEndingB
+	\break
+      }
+    }
+    \new DrumVoice {
+      \voiceTwo 
+      \repeat percent 4
+      {
+	\downTheme
+	\downTheme
+	\downTheme
+	\downThemeEndingB
+      }
+    }
+  >>
 }
 
 allRiffThree = \drummode

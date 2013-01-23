@@ -44,8 +44,8 @@ downThemeEndingB = \drummode
 
 allIntro = \drummode
 {
-  r2 r4 
-  \acciaccatura sn16 sn4
+  R1*3
+  r2 r4 \acciaccatura sn16 sn4
 }
 
 allPreVerse = \drummode

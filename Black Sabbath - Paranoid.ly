@@ -235,11 +235,32 @@ allSolo = \drummode
 
 allRiffThree = \drummode
 {
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \repeat percent 2
+      {
+	\upTheme
+	\upTheme
+	\upTheme
+	\upThemeEndingB
+	\break
+      }
+    }
+    \new DrumVoice {
+      \voiceTwo 
+      \repeat percent 2
+      {
+	\downTheme
+	\downTheme
+	\downTheme
+	\downThemeEndingB
+      }
+    }
+  >>
 }
 
-allVerseFive = \drummode
-{
-}
+allVerseFive = \allRiffThree
 
 allRiffFour = \drummode
 {

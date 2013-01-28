@@ -244,8 +244,6 @@ allSolo = \drummode
   << 
     \new DrumVoice {
       \voiceOne
-      \set countPercentRepeats = ##t
-      \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
       \repeat percent 8 { \upSolo \upChorusA }
 
     }
@@ -360,7 +358,11 @@ song =
 \score
 {
   \song
-  \layout { }
+  \layout
+  {
+    \set countPercentRepeats = ##t
+    \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
+  }
 }
 
 % MIDI

@@ -110,7 +110,7 @@ allVerseOne = \drummode
 
 upChorusA = \drummode
 {
-  cymc4 <<cymc sn>> cymc <<cymc sn>>
+  cymc4 cymc cymc cymc
 }
 
 upChorusB = \drummode
@@ -120,7 +120,7 @@ upChorusB = \drummode
 
 downChorusA = \drummode
 {
-  bd4 s4 bd8 bd8 s4
+  bd4 sn4 bd8 bd8 sn4
 }
 
 downChorusB = \drummode
@@ -135,13 +135,13 @@ allChorusOne = \drummode
       \voiceOne
       \repeat unfold 3 { \upChorusA \upChorusB }
       \upChorusA
-      cymc4 sn16-> sn sn sn tommh tommh tomml tomfh \acciaccatura sn16 sn8
+      cymc4 s2 s4 
     }
     \new DrumVoice {
       \voiceTwo
       \repeat unfold 3 { \downChorusA \downChorusB }
       \downChorusA
-      bd4 s2 s8 bd8
+      bd4 sn16-> sn sn sn tommh tommh tomml tomfh \acciaccatura sn16 sn8 bd8
     }
   >>
 }
@@ -222,7 +222,7 @@ allBridgeOne = \drummode
 
 upSolo = \drummode
 {
-  cymc4 <<cymc8. sn8.>> < \parenthesize sn16 > cymc4 <<cymc4 sn>>
+  cymc4 cymc cymc cymc
 }
 
 allPreSolo = \drummode

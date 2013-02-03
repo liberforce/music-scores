@@ -173,13 +173,12 @@ allChorusTwo = \drummode
       \voiceOne
       \repeat unfold 3 { \upChorusA \upChorusB }
       \upChorusA
-      sn8-> s sn-> s sn-> s sn->
     }
     \new DrumVoice {
       \voiceTwo
       \repeat unfold 3 { \downChorusA \downChorusB }
       \downChorusA
-      s8 bd s bd s bd s bd
+      sn8->[ bd] sn->[ bd] sn->[ bd] sn->[ bd]
     }
   >>
 }

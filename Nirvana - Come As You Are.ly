@@ -185,27 +185,32 @@ allChorusTwo = \drummode
 
 upBridgeA = \drummode
 {
-  cymc8 hhho <<hhho sn>> hhho hhho hhho <<hhho sn>> hhho
+  cymc8 hhho hhho hhho hhho hhho hhho hhho
 }
 
 upBridgeB = \drummode
 {
-  cymc8 hhho <<hhho sn>> hhho hhho hhho <<hhho sn>> sn16->[ sn->]
+  cymc8 hhho hhho hhho hhho hhho hhho s8
 }
 
 upBridgeC = \drummode
 {
-  cymc8 hhho <<hhho sn>> hhho hhho hhho <<cymc sn>> hhho
+  cymc8 hhho hhho hhho hhho hhho cymc hhho
 }
 
 downBridgeA = \drummode
 {
-  bd8 bd s4 bd8 bd s4
+  bd8 bd sn4 bd8 bd sn4
 }
 
 downBridgeB = \drummode
 {
-  bd8 bd s4 bd8 bd s bd
+  bd8 bd sn4 bd8 bd sn sn16->[ sn->]
+}
+
+downBridgeC = \drummode
+{
+  bd8 bd sn4 bd8 bd sn bd
 }
 
 allBridgeOne = \drummode
@@ -219,7 +224,7 @@ allBridgeOne = \drummode
     \new DrumVoice {
       \voiceTwo
       \repeat volta 4 { \downBridgeA }
-      \alternative { \downBridgeA \downBridgeB }
+      \alternative { \downBridgeB \downBridgeC }
     }
   >>
 }

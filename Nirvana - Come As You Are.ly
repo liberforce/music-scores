@@ -70,17 +70,17 @@ allVerseOne = \drummode
 
       \upTheme
       \upTheme
-      \upTheme %\upThemeGhost
-      \upTheme
-
-      \upThemeHeadingCrash
-      \upTheme
       \upTheme
       \upTheme
 
       \upThemeHeadingCrash
       \upTheme
-      \upTheme %\upThemeGhost
+      \upTheme
+      \upTheme
+
+      \upThemeHeadingCrash
+      \upTheme
+      \upTheme
       \upTheme
     }
     \new DrumVoice {
@@ -115,7 +115,7 @@ upChorusA = \drummode
 
 upChorusB = \drummode
 {
-  cymc4 sn16-> sn sn sn sn16-> sn sn sn sn16-> sn sn sn
+  cymc4 s4 s2 
 }
 
 downChorusA = \drummode
@@ -125,7 +125,12 @@ downChorusA = \drummode
 
 downChorusB = \drummode
 {
-  bd4 bd bd bd
+  bd4
+  \stemUp
+  <bd sn>16-> sn sn sn
+  <bd sn>16-> sn sn sn
+  <bd sn>16-> sn sn sn
+  \stemDown
 }
 
 allChorusOne = \drummode

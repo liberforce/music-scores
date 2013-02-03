@@ -183,6 +183,8 @@ allChorusTwo = \drummode
   >>
 }
 
+allChorusThree = \allChorusTwo
+
 upBridgeA = \drummode
 {
   cymc8 hhho hhho hhho hhho hhho hhho hhho
@@ -350,7 +352,7 @@ song =
   \break
 
   \mark "Chorus 3"
-  \allChorusTwo       % same as chorus 2
+  \allChorusThree
   \break
   
   \mark "Bridge 2"

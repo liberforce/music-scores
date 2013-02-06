@@ -1,5 +1,10 @@
-all:
-	#lilypond --pdf "Nirvana - Come As You Are.ly"
-	#evince "Nirvana - Come As You Are.pdf" &
+mind:
+	lilypond --pdf "Pixies - Where is my mind.ly"
+
+caya:
+	lilypond --pdf "Nirvana - Come As You Are.ly"
+
+paranoid:
 	lilypond --pdf "Black Sabbath - Paranoid.ly"
-	evince "Black Sabbath - Paranoid.pdf" &
+
+all: mind caya paranoid 

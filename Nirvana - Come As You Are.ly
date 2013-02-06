@@ -245,7 +245,7 @@ allPreSolo = \drummode
     }
     \new DrumVoice {
       \voiceTwo
-      \repeat percent 2 { \downThemeA \downThemeB }
+      \repeat percent 2 { \downGhostThemeA \downThemeB }
     }
   >>
 }
@@ -260,7 +260,7 @@ allSolo = \drummode
     }
     \new DrumVoice {
       \voiceTwo
-      \repeat percent 8 { \downThemeA \downThemeB }
+      \repeat percent 8 { \downGhostThemeA \downThemeB }
     }
   >>
 }

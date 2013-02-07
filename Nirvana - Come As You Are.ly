@@ -241,11 +241,20 @@ allPreSoloSolo = \drummode
   << 
     \new DrumVoice {
       \voiceOne
-      \repeat percent 5 { \upSolo \upChorusA \upSolo \upChorusA \mark "Solo" \break}
+      \repeat percent 10 { \upSolo \upChorusA }
     }
     \new DrumVoice {
       \voiceTwo
       \repeat percent 10 { \downGhostThemeA \downThemeB }
+    }
+    \context DrumVoice {
+      \set countPercentRepeats = ##t
+      \override PercentRepeat #'transparent = ##t
+      \override PercentRepeatCounter #'staff-padding = #1
+      \repeat percent 10 { s1 s1 }
+    }
+    \context DrumVoice {
+      { s1*4 \break \mark "Solo" s1*16 }
     }
   >>
 }
@@ -329,7 +338,7 @@ song =
   \break
 
   \mark "Pre-Solo"
-  \allPreSoloSolo
+  \allPreSoloSolo % includes Solo
   \break
 
 %  \mark "Solo"
@@ -356,8 +365,8 @@ song =
   \song
   \layout
   {
-    \set countPercentRepeats = ##t
-    \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
+%    \set countPercentRepeats = ##t
+%    \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
   }
 }
 

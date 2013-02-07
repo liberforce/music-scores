@@ -257,7 +257,7 @@ allRiffThree = \drummode
   >>
 }
 
-allVerseFive = \allRiffThree
+allVerseFive = \allVerseFour
 
 allRiffFour = \drummode
 {

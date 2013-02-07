@@ -270,7 +270,7 @@ allBridgeTwo = \drummode
     \new DrumVoice {
       \voiceTwo
       \repeat volta 6 { \downBridgeA }
-      \alternative { \downBridgeA \downBridgeB }
+      \alternative { \downBridgeB \downBridgeC }
     }
   >>
 }

@@ -180,28 +180,23 @@ allVerseFour = \drummode
   << 
     \new DrumVoice {
       \voiceOne
-      \upTheme
-      \upTheme
-      \upTheme
-      \upThemeEndingB
-      \break
-
-      \upTheme
-      \upTheme
-      \upTheme
-      \upThemeEndingB
+      \repeat volta 2
+      {
+	\upTheme
+	\upTheme
+	\upTheme
+	\upThemeEndingB
+      }
     }
     \new DrumVoice {
       \voiceTwo 
-      \downTheme
-      \downTheme
-      \downTheme
-      \downThemeEndingB
-
-      \downTheme
-      \downTheme
-      bd4 sn <bd sn> sn
-      \downThemeEndingB
+      \repeat volta 2
+      {
+	\downTheme
+	\downTheme
+	\downTheme
+	\downThemeEndingB
+      }
     }
   >>
 }
@@ -211,7 +206,7 @@ allSolo = \drummode
   << 
     \new DrumVoice {
       \voiceOne
-      \repeat percent 4
+      \repeat volta 4
       {
 	\upTheme
 	\upTheme
@@ -222,7 +217,7 @@ allSolo = \drummode
     }
     \new DrumVoice {
       \voiceTwo 
-      \repeat percent 4
+      \repeat volta 4
       {
 	\downTheme
 	\downTheme
@@ -253,7 +248,7 @@ allRiffThree = \drummode
       {
 	\downTheme
 	\downTheme
-	\downTheme
+	bd4 sn <bd sn> sn
 	\downThemeEndingB
       }
     }

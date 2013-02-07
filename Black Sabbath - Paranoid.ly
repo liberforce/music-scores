@@ -233,7 +233,7 @@ allRiffThree = \drummode
   << 
     \new DrumVoice {
       \voiceOne
-      \repeat percent 2
+      \repeat unfold 2
       {
 	\upTheme
 	\upTheme
@@ -244,13 +244,15 @@ allRiffThree = \drummode
     }
     \new DrumVoice {
       \voiceTwo 
-      \repeat percent 2
-      {
-	\downTheme
-	\downTheme
-	bd4 sn <bd sn> sn
-	\downThemeEndingB
-      }
+      \downTheme
+      \downTheme
+      bd4 sn <bd sn> sn
+      \downThemeEndingB
+      
+      \downTheme
+      \downTheme
+      \downTheme
+      \downThemeEndingB
     }
   >>
 }

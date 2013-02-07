@@ -236,31 +236,16 @@ upSolo = \drummode
   cymc4 cymc cymc cymc
 }
 
-allPreSolo = \drummode
+allPreSoloSolo = \drummode
 {
   << 
     \new DrumVoice {
       \voiceOne
-      \repeat percent 2 { \upSolo \upChorusA }
+      \repeat percent 5 { \upSolo \upChorusA \upSolo \upChorusA \mark "Solo" \break}
     }
     \new DrumVoice {
       \voiceTwo
-      \repeat percent 2 { \downGhostThemeA \downThemeB }
-    }
-  >>
-}
-
-allSolo = \drummode
-{
-  << 
-    \new DrumVoice {
-      \voiceOne
-      \repeat percent 8 { \upSolo \upChorusA }
-
-    }
-    \new DrumVoice {
-      \voiceTwo
-      \repeat percent 8 { \downGhostThemeA \downThemeB }
+      \repeat percent 10 { \downGhostThemeA \downThemeB }
     }
   >>
 }
@@ -344,12 +329,12 @@ song =
   \break
 
   \mark "Pre-Solo"
-  \allPreSolo
+  \allPreSoloSolo
   \break
 
-  \mark "Solo"
-  \allSolo
-  \break
+%  \mark "Solo"
+%  \allSolo
+%  \break
 
   \mark "Chorus 3"
   \allChorusThree

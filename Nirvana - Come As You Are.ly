@@ -277,12 +277,12 @@ allBridgeTwo = \drummode
 
 upOutroEnd = \drummode
 {
-  cymc4 <<cymc sn>> <<cymc8 sn8>> sn8 cymc4
+  cymc4 cymc cymc cymc
 }
 
 downOutroEnd = \drummode
 {
-  bd8 bd4 bd4. bd8 bd
+  bd8 bd sn bd sn[ sn] bd[ bd]
 }
 
 allOutro = \drummode
@@ -292,15 +292,17 @@ allOutro = \drummode
       \voiceOne
       \repeat volta 4 { \upSolo }
       \alternative { \upChorusA \upOutroEnd }
-      cymc1
+      cymc4
     }
     \new DrumVoice {
       \voiceTwo
       \repeat volta 4 { \downThemeA }
       \alternative { \downThemeB \downOutroEnd }
-      bd1
+      bd4
     }
   >>
+  \oneVoice
+  r4 r2
   R1*2
 }
 

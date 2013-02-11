@@ -79,7 +79,7 @@ upThemeThreeB = \drummode
 
 upFlaHalfTheme = \drummode 
 {
-  hh8 hh \acciaccatura sn8 sn4 
+  hh8 hh \acciaccatura sn16 sn4 
 }
 
 upSectionC = \drummode
@@ -90,7 +90,7 @@ upSectionC = \drummode
 
   % Measure 22
   \upFlaHalfTheme
-  hh8 hh \acciaccatura sn8 sn8 toml8
+  hh8 hh \acciaccatura sn16 sn8 toml8
 
   % Measure 23 (beginning)
   cymc4
@@ -128,7 +128,7 @@ upSectionG = \drummode
 
   % Measure 43
   tommh16^"R"[ tommh8^"L" tomml16^"L" tomml8^"R" tomfh16^"R" tomfh16^"L"] r16
-  sn16\<^"L"[  \acciaccatura { sn[ sn] } sn^"L" tomml16^"R"] \stemDown { tomfh16[ tomfh \acciaccatura sn8 sn]\! } \stemUp
+  sn16\<^"L"[  \acciaccatura { sn[ sn] } sn^"L" tomml16^"R"] \stemDown { tomfh16[ tomfh \acciaccatura sn16 sn]\! } \stemUp
 }
 
 upSectionJ = \drummode

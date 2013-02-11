@@ -261,11 +261,36 @@ allVerseFive = \allVerseFour
 
 allRiffFour = \drummode
 {
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \upTheme
+      <cymc hh>4 hh <cymc hh>4 s4
+      \upThemeHeadingCrashB
+      \upTheme
+      \break
+
+      \upThemeHeadingCrashB
+      \upThemeDoubleCrash
+      \upThemeHeadingCrashB
+      \upThemeEndingA
+    }
+    \new DrumVoice {
+      \voiceTwo 
+      \downTheme
+      \downThemeEndingA
+      \downTheme
+      \downTheme
+
+      \downThemeEndingA
+      \downTheme
+      \downTheme
+      bd4 sn bd \acciaccatura sn16 sn4
+    }
+  >>
 }
 
-allVerseSix = \drummode
-{
-}
+allVerseSix = \allVerseOne
 
 allOutro = \drummode
 {

@@ -294,6 +294,36 @@ allVerseSix = \allVerseOne
 
 allOutro = \drummode
 {
+  << 
+    \new DrumVoice {
+      \voiceOne
+      \upTheme
+      \upTheme
+      \upTheme
+      \upThemeEndingB
+      \break
+
+      \upTheme
+      \upTheme
+      \upTheme
+      cymc8 cymc4. cymc4
+    }
+    \new DrumVoice {
+      \voiceTwo 
+      \downTheme
+      \downTheme
+      \downTheme
+      \downThemeEndingB
+
+      \downTheme
+      \downTheme
+      \downTheme
+      bd8 bd4. bd4
+    }
+  >>
+
+  \oneVoice
+  r4
 }
 
 song = 

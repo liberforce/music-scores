@@ -199,7 +199,7 @@ allOutro = \drummode
         \upTheme
         \upTheme
       }
-      cymc4
+      cymc16 cymc16 cymc8
     }
     \new DrumVoice
     {

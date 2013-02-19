@@ -218,7 +218,7 @@ allOutro = \drummode
 song = 
 \drums 
 {
-  \tempo 4=164
+  \tempo 4=115
 
   \mark "Intro"
   \allIntro

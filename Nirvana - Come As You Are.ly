@@ -296,7 +296,7 @@ allOutro = \drummode
     }
     \new DrumVoice {
       \voiceTwo
-      \repeat volta 4 { \downThemeA }
+      \repeat volta 4 { \downGhostThemeA }
       \alternative { \downThemeB \downOutroEnd }
       bd4
     }

@@ -7,4 +7,7 @@ caya:
 paranoid:
 	lilypond --pdf "Black Sabbath - Paranoid.ly"
 
-all: mind caya paranoid 
+sun:
+	lilypond --pdf "Weezer - Island In The Sun.ly"
+
+all: mind caya paranoid sun 

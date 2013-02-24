@@ -148,14 +148,6 @@ allChorusThree = \drummode
   >>
 }
 
-allVerseThree = \drummode
-{
-}
-
-allVerseFour = \drummode
-{
-}
-
 allPreSolo = \allPreVerse
 
 allSolo = \drummode
@@ -181,8 +173,6 @@ allSolo = \drummode
     }
   >>
 }
-
-allVerseFive = \allVerseFour
 
 allChorusFour = \allChorusOne
 

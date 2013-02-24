@@ -10,4 +10,7 @@ paranoid:
 sun:
 	lilypond --pdf "Weezer - Island In The Sun.ly"
 
-all: mind caya paranoid sun 
+nation:
+	lilypond --pdf "White Stripes - Seven Nation Army.ly"
+
+all: mind caya paranoid sun nation

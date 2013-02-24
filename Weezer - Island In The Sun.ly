@@ -34,7 +34,7 @@ downThemeEndingB = \drummode
 
 allIntro = \drummode
 {
-  R1*1
+  R1*2
   << 
     \new DrumVoice
     {

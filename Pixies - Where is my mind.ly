@@ -128,7 +128,7 @@ upSectionG = \drummode
 
   % Measure 43
   tommh16^"R"[ tommh8^"L" tomml16^"L" tomml8^"R" tomfh16^"R" tomfh16^"L"] r16
-  sn16\<^"L"[  \acciaccatura { sn[ sn] } sn^"L" tomml16^"R"] \stemDown { tomfh16[ tomfh \acciaccatura sn16 sn]\! } \stemUp
+  sn16\<^"L"[ \mf \acciaccatura { sn[ sn] } sn^"L" tomml16^"R"] \stemDown { tomfh16[ tomfh \acciaccatura sn16 sn]\! } \stemUp
 }
 
 upSectionJ = \drummode
@@ -213,7 +213,7 @@ allSectionA = \drummode
 
   % Measure 4
   r2
-  \new DrumVoice { \voiceOne \drummode { sn16\< sn sn sn sn4\! } }
+  \new DrumVoice { \voiceOne \drummode { sn16\< \mp sn sn sn sn4\! } }
 }
 
 allSectionB = \drummode

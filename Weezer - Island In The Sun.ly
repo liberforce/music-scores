@@ -148,15 +148,13 @@ allChorusThree = \drummode
   >>
 }
 
-allPreSolo = \allPreVerse
-
-allSolo = \drummode
+allPreSoloSolo = \drummode
 {
   << 
     \new DrumVoice
     {
       \voiceOne
-      \repeat percent 4
+      \repeat percent 6
       {
         \upTheme
         \upTheme
@@ -165,11 +163,18 @@ allSolo = \drummode
     \new DrumVoice
     {
       \voiceTwo 
-      \repeat percent 4
+      \repeat percent 6
       {
         \downTheme
         \downThemeEndingA
       }
+    }
+    \context DrumVoice
+    {
+      {
+        s1*4
+        \break
+        \mark "Solo" }
     }
   >>
 }
@@ -239,12 +244,12 @@ song =
   \break
 
   \mark "Pre-Solo"
-  \allPreSolo
+  \allPreSoloSolo % includes pre-solo + solo
   \break
 
-  \mark "Solo"
-  \allSolo
-  \break
+  %\mark "Solo"
+  %\allSolo
+  %\break
 
   \mark "Chorus 4"
   \allChorusFour

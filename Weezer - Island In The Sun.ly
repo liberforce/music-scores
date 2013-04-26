@@ -89,9 +89,9 @@ allVerseOne = \drummode
   >>
 }
 
-allChorusOne = \allVerseOne
+allPreChorusOne = \allVerseOne
 
-allPreVerse = \drummode
+allBridgeOne = \drummode
 {
   << 
     \new DrumVoice
@@ -117,14 +117,14 @@ allPreVerse = \drummode
 
 allVerseTwo = \allVerseOne
 
-allChorusTwo = \allChorusOne
+allPreChorusTwo = \allPreChorusOne
 
 upCrashChorus = \drummode
 {
   cymc8 hh cymc hh cymc hh cymc hh
 }
 
-allChorusThree = \drummode
+allChorusOne = \drummode
 {
   << 
     \new DrumVoice
@@ -148,7 +148,7 @@ allChorusThree = \drummode
   >>
 }
 
-allPreSoloSolo = \drummode
+allBridgeSolo = \drummode
 {
   << 
     \new DrumVoice
@@ -179,9 +179,9 @@ allPreSoloSolo = \drummode
   >>
 }
 
-allChorusFour = \allChorusOne
+allPreChorusThree = \allPreChorusOne
 
-allChorusFive = \allChorusThree
+allChorusTwo = \allChorusOne
 
 allOutro = \drummode
 {
@@ -223,40 +223,40 @@ song =
   \allVerseOne
   \break
 
-  \mark "Chorus 1"
-  \allChorusOne
+  \mark "Pre-Chorus 1"
+  \allPreChorusOne
   \break
   
-  \mark "Pre-Verse"
-  \allPreVerse
+  \mark "Bridge 1"
+  \allBridgeOne
   \break
 
   \mark "Verse 2"
   \allVerseTwo
   \break
 
-  \mark "Chorus 2"
-  \allChorusTwo
+  \mark "Pre-Chorus 2"
+  \allPreChorusTwo
   \break
 
-  \mark "Chorus 3"
-  \allChorusThree
+  \mark "Chorus 1"
+  \allChorusOne
   \break
 
-  \mark "Pre-Solo"
-  \allPreSoloSolo % includes pre-solo + solo
+  \mark "Bridge 2"
+  \allBridgeSolo % includes bridge + solo
   \break
 
   %\mark "Solo"
   %\allSolo
   %\break
 
-  \mark "Chorus 4"
-  \allChorusFour
+  \mark "Pre-Chorus 3"
+  \allPreChorusThree
   \break
 
-  \mark "Chorus 5"
-  \allChorusFive
+  \mark "Chorus 2"
+  \allChorusTwo
   \break
 
   \mark "Outro"

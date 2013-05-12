@@ -242,6 +242,8 @@ allVerseTwo = \allVerseOne
 
 allPreChorusThree = \allPreChorusOne
 
+allChorusThree = \allChorusOne
+
 song = 
 \drums 
 {
@@ -285,6 +287,10 @@ song =
 
   \mark "Pre-Chorus 3"
   \allPreChorusThree
+  \break
+
+  \mark "Chorus 3"
+  \allChorusThree
   \break
 
 %  \mark "Outro"

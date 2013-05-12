@@ -13,4 +13,7 @@ sun:
 nation:
 	lilypond --pdf "White Stripes - Seven Nation Army.ly"
 
-all: mind caya paranoid sun nation
+sunday:
+	lilypond --pdf "U2 - Sunday Bloody Sunday.ly"
+
+all: mind caya paranoid sun nation sunday

@@ -189,25 +189,22 @@ allOutro = \drummode
     \new DrumVoice
     {
       \voiceOne
-      \repeat percent 2
+      \repeat percent 7
       {
         \upTheme
         \upTheme
       }
-      cymc16 cymc16 cymc8
     }
     \new DrumVoice
     {
       \voiceTwo 
-      \repeat percent 2
+      \repeat percent 7
       {
         \downTheme
         \downThemeEndingA
       }
-      bd4
     }
   >>
-  r4 r2
 }
 
 song = 

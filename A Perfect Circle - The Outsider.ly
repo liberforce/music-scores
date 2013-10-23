@@ -9,17 +9,17 @@
 
 upThemeHeadingCrash = \drummode
 {
-  cymc8 hh hh hh hh hh
+  cymc8 hh <<hh sn>> hh hh <<hh sn>>
 }
 
 upTheme = \drummode
 {
-  hh8 hh hh hh hh hh 
+  hh8 hh <<hh sn>> hh hh <<hh sn>> 
 }
 
 downTheme = \drummode
 {
-  bd8 bd sn8. bd8 bd16 sn8
+  bd8 bd r8. bd8 bd8.
 }
 
 allIntro = \drummode
@@ -32,7 +32,7 @@ allIntro = \drummode
       \upThemeHeadingCrash
       \upTheme
       \upTheme
-      hh8 hh hh cymc cymc r
+      hh8 hh <<hh sn>> <<cymc sn>> <<cymc sn>> r
     }
     \new DrumVoice
     {
@@ -40,7 +40,7 @@ allIntro = \drummode
       \downTheme
       \downTheme
       \downTheme
-      bd8 bd16 bd16 sn8 sn sn sn16 sn
+      bd8 bd16 bd16 r8.
     }
   >>
 }

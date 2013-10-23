@@ -32,7 +32,7 @@ allIntro = \drummode
       \upThemeHeadingCrash
       \upTheme
       \upTheme
-      hh8 hh <<hh sn>> <<cymc sn>> <<cymc sn>> r
+      hh8 hh <<hh sn>> <<cymc sn>> <<cymc sn>> sn16 sn
     }
     \new DrumVoice
     {
@@ -41,6 +41,83 @@ allIntro = \drummode
       \downTheme
       \downTheme
       bd8 bd16 bd16 r8.
+    }
+  >>
+}
+
+upVerseOneHeadingCrash = \drummode
+{
+  cymc8 hh <<hh sn>> hh hh hh <<hh sn>> hho
+}
+
+upVerseOne = \drummode
+{
+  hhc8 hh <<hh sn>> hh hh hh <<hh sn>> hho
+}
+
+upVerseOneEndingCrashes = \drummode
+{
+  hhc8 hh <<hh sn>> hh hh hh <<cymc sn>> <<cymc sn>>
+}
+
+upVerseOneEndingCrash = \drummode
+{
+  hhc8 hh <<hh sn>> hh hh hh <<hho sn>> cymc
+}
+
+upVerseOneFill = \drummode
+{
+  hhc8 hh <<hh sn>> hh cymc <<hh sn>> sn8. sn16
+}
+
+downVerseOne = \drummode
+{
+  bd8.[ bd8.] bd8. bd8 bd16 r4
+}
+
+downVerseOneEndingTom = \drummode
+{
+  bd8.[ bd8.] bd8. bd8 bd16 r8 toml
+}
+
+downVerseOneEndingSnareRollTom = \drummode
+{
+  bd8.[ bd8.] bd8. bd16 bd bd r8 tomfl
+}
+
+downVerseOneFill = \drummode
+{
+  bd8.[ bd8.] r8 bd8. bd32[ bd8.] tomfl8
+}
+
+allVerseOne = \drummode
+{
+  << 
+    \new DrumVoice
+    {
+      \voiceOne
+      \upVerseOneHeadingCrash
+      \upVerseOne
+      \upVerseOne
+      \upVerseOneEndingCrashes
+
+      \upVerseOneEndingCrash
+      \upVerseOneEndingCrash
+      \upVerseOneEndingCrash
+      \upVerseOneFill
+    }
+    \new DrumVoice
+    {
+      \voiceTwo 
+      \downVerseOne
+      \downVerseOne
+      \downVerseOne
+      \downVerseOne
+
+      \downVerseOneEndingTom
+      \downVerseOneEndingTom
+      \downVerseOneEndingSnareRollTom
+      \downVerseOneFill
     }
   >>
 }
@@ -82,27 +159,6 @@ allChorusOne = \drummode
   >>
 }
 
-upVerse = \drummode
-{
-  hh16 hh hh hh sn hh hh hh hh hh hh hh sn hh hh hh
-}
-
-allVerseOne = \drummode
-{
-  << 
-    \new DrumVoice
-    {
-      \voiceOne
-      \upVerse
-    }
-    \new DrumVoice
-    {
-      \voiceTwo 
-      \downTheme
-    }
-  >>
-}
-
 allChorusTwo = \allChorusOne
 
 allVerseTwo = \allVerseOne
@@ -119,10 +175,10 @@ song =
   \allIntro
   \break
 
-%  \time 4/4
-%  \mark "Verse 1"
-%  \allVerseOne
-%  \break
+  \time 4/4
+  \mark "Verse 1"
+  \allVerseOne
+  \break
 %  
 %  \mark "Chorus 1"
 %  \allChorusOne

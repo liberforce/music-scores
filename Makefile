@@ -16,4 +16,7 @@ nation:
 sunday:
 	lilypond --pdf "U2 - Sunday Bloody Sunday.ly"
 
-all: mind caya paranoid sun nation sunday
+outsider:
+	lilypond --pdf "A Perfect Circle - The Outsider.ly"
+
+all: mind caya paranoid sun nation sunday outsider

@@ -40,7 +40,7 @@ allIntro = \drummode
       \downTheme
       \downTheme
       \downTheme
-      bd8 bd16 bd16 r8.
+      bd8 bd16 bd16 r8 r4
     }
   >>
 }

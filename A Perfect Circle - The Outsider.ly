@@ -60,9 +60,9 @@ upVerseOneEndingCrashes = \drummode
   hhc8 hh <<hh sn>> hh hh hh <<cymc sn>> <<cymc sn>>
 }
 
-upVerseOneEndingCrash = \drummode
+upVerseOneEndingHHO = \drummode
 {
-  hhc8 hh <<hh sn>> hh hh hh <<hho sn>> cymc
+  hhc8 hh <<hh sn>> hh hh hh <<hho sn>> r
 }
 
 upVerseOneFill = \drummode
@@ -101,9 +101,9 @@ allVerseOne = \drummode
       \upVerseOne
       \upVerseOneEndingCrashes
 
-      \upVerseOneEndingCrash
-      \upVerseOneEndingCrash
-      \upVerseOneEndingCrash
+      \upVerseOneEndingHHO
+      \upVerseOneEndingHHO
+      \upVerseOneEndingHHO
       \upVerseOneFill
     }
     \new DrumVoice

@@ -72,17 +72,17 @@ upVerseOneFill = \drummode
 
 downVerseOne = \drummode
 {
-  bd8.[ bd8.] bd8. bd8 bd16 r4
+  bd8. bd8. bd8. bd8 bd16 r4
 }
 
 downVerseOneEndingBDRoll = \drummode
 {
-  bd8.[ bd8.] bd8. bd16 bd bd r4
+  bd8. bd8. bd8. bd16 bd bd r4
 }
 
 downVerseOneFill = \drummode
 {
-  bd8.[ bd8.] bd4 bd16[ bd16] r4
+  bd8. bd8. bd4 bd16 bd16 r4
 }
 
 allVerseOne = \drummode

@@ -200,9 +200,24 @@ allPreChorusOne = \drummode
   >>
 }
 
-upChorus = \drummode
+upChorusOneEndingA = \drummode
 {
-  hh16 hh hh hh sn hh sn sn sn sn hh hh sn hh sn sn
+  cymc8 hh <hh sn> <hh sn> hh sn16 sn
+}
+
+upChorusOneEndingB = \drummode
+{
+  hh16 sn hh8 sn16 sn32 sn tomfl16 tomfl sn tomfl tomfl sn
+}
+
+downChorusOneEndingA = \drummode
+{
+  bd8. bd16 bd4 bd8 bd8.
+}
+
+downChorusOneEndingB = \drummode
+{
+  bd8. bd8 bd8. r4
 }
 
 allChorusOne = \drummode
@@ -211,12 +226,28 @@ allChorusOne = \drummode
     \new DrumVoice
     {
       \voiceOne
-      \upChorus
+      \upThemeHeadingCrash
+      \upTheme
+      \upThemeHeadingCrash
+      \upChorusOneEndingA
+
+      \upThemeHeadingCrash
+      \upTheme
+      \upThemeHeadingCrash
+      \upChorusOneEndingB
     }
     \new DrumVoice
     {
       \voiceTwo 
       \downTheme
+      \downTheme
+      \downTheme
+      \downChorusOneEndingA
+      
+      \downTheme
+      \downTheme
+      \downTheme
+      \downChorusOneEndingB
     }
   >>
 }
@@ -246,11 +277,12 @@ song =
   \time 6/8
   \mark "Pre-Chorus"
   \allPreChorusOne
+  \break
 
-%  \mark "Chorus 1"
-%  \allChorusOne
-%  \break
-%
+  \mark "Chorus 1"
+  \allChorusOne
+  \break
+
 %  \mark "Verse 2"
 %  \allVerseTwo
 %  \break

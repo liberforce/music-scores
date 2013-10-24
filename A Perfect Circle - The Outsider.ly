@@ -9,12 +9,12 @@
 
 upThemeHeadingCrash = \drummode
 {
-  cymc8 hh <<hh sn>> hh hh <<hh sn>>
+  cymc8 hh <hh sn> hh hh <hh sn>
 }
 
 upTheme = \drummode
 {
-  hh8 hh <<hh sn>> hh hh <<hh sn>> 
+  hh8 hh <hh sn> hh hh <hh sn> 
 }
 
 downTheme = \drummode
@@ -32,7 +32,7 @@ allIntro = \drummode
       \upThemeHeadingCrash
       \upTheme
       \upTheme
-      hh8 hh <<hh sn>> <<cymc sn>> <<cymc sn>> sn16 sn
+      hh8 hh <hh sn> <cymc sn> <cymc sn> sn16 sn
     }
     \new DrumVoice
     {
@@ -47,27 +47,27 @@ allIntro = \drummode
 
 upVerseOneHeadingCrash = \drummode
 {
-  cymc8 hh <<hh sn>> hh hh hh <<hh sn>> hho
+  cymc8 hh <hh sn> hh hh hh <hh sn> hho
 }
 
 upVerseOne = \drummode
 {
-  hhc8 hh <<hh sn>> hh hh hh <<hh sn>> hho
+  hhc8 hh <hh sn> hh hh hh <hh sn> hho
 }
 
 upVerseOneEndingCrashes = \drummode
 {
-  hhc8 hh <<hh sn>> hh hh hh <<cymc sn>> <<cymc sn>>
+  hhc8 hh <hh sn> hh hh hh <cymc sn> <cymc sn>
 }
 
 upVerseOneEndingHHO = \drummode
 {
-  hhc8 hh <<hh sn>> hh hh hh <<hho sn>> r
+  hhc8 hh <hh sn> hh hh hh <hho sn> r
 }
 
 upVerseOneFill = \drummode
 {
-  hhc8 hh <<hh sn>> cymc hh16 sn16 r8 sn8. sn16
+  hhc8 hh <hh sn> cymc hh16 sn16 r8 sn8. sn16
 }
 
 downVerseOne = \drummode
@@ -129,7 +129,7 @@ upPreChorusOneFillA = \drummode
 
 upPreChorusOneHeadingCrash = \drummode
 {
-  cymc8 hh hh <<hh sn>> hh <<hh sn>>
+  cymc8 hh hh <hh sn> hh <hh sn>
 }
 
 downPreChorusOne = \drummode

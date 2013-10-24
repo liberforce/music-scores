@@ -193,6 +193,7 @@ song =
 \drums 
 {
   \tempo 4=85
+  \numericTimeSignature
 
   \time 6/8
   \mark "Intro"

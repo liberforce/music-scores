@@ -24,7 +24,8 @@ downTheme = \drummode
 
 allIntro = \drummode
 {
-  R1*6/8*2
+  \compressFullBarRests
+  R1*6/8*8
   << 
     \new DrumVoice
     {

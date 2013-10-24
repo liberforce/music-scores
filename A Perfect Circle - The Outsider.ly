@@ -67,7 +67,7 @@ upVerseOneEndingHHO = \drummode
 
 upVerseOneFill = \drummode
 {
-  hhc8 hh <<hh sn>> hh cymc <<hh sn>> sn8. sn16
+  hhc8 hh <<hh sn>> cymc hh16 sn16 r8 sn8. sn16
 }
 
 downVerseOne = \drummode
@@ -87,7 +87,7 @@ downVerseOneEndingSnareRollTom = \drummode
 
 downVerseOneFill = \drummode
 {
-  bd8.[ bd8.] r8 bd8. bd32[ bd8.] tomfl8
+  bd8.[ bd8.] bd4 bd16[ bd16] r8 tomfl8
 }
 
 allVerseOne = \drummode

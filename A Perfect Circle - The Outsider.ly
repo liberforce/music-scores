@@ -122,18 +122,42 @@ allVerseOne = \drummode
   >>
 }
 
+upPreChorusOneFillA = \drummode
+{
+  hh8 hh hh <hh sn>4
+}
+
+upPreChorusOneHeadingCrash = \drummode
+{
+  cymc8 hh hh <<hh sn>> hh <<hh sn>>
+}
+
+downPreChorusOne = \drummode
+{
+  bd8. bd8 bd8. bd16 bd8.
+}
+
+downPreChorusOneFillA = \drummode
+{
+  bd8. bd8 bd8. tomh16[ tomh toml toml]
+}
+
 allPreChorusOne = \drummode
 {
   <<
     \new DrumVoice
     {
       \voiceOne
-      \upTheme
+      \repeat percent 3
+      { \upPreChorusOneHeadingCrash }
+      \upPreChorusOneFillA
     }
     \new DrumVoice
     {
       \voiceTwo
-      \downTheme
+      \repeat percent 3
+      { \downPreChorusOne }
+      \downPreChorusOneFillA
     }
   >>
 }
@@ -168,9 +192,9 @@ allOutro = \allIntro
 song = 
 \drums 
 {
-  \time 6/8
   \tempo 4=85
 
+  \time 6/8
   \mark "Intro"
   \allIntro
   \break
@@ -179,7 +203,11 @@ song =
   \mark "Verse 1"
   \allVerseOne
   \break
-%  
+
+  \time 6/8
+  \mark "Pre-Chorus"
+  \allPreChorusOne
+
 %  \mark "Chorus 1"
 %  \allChorusOne
 %  \break

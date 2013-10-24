@@ -127,12 +127,44 @@ upPreChorusOneFillA = \drummode
   hh8 hh hh <hh sn> tomh16 tomh toml toml
 }
 
+upPreChorusOneHeadTailCrash = \drummode
+{
+  cymc8 hh hh <hh sn> hh <cymc sn>
+}
+
+upPreChorusEndingCrashA = \drummode
+
+{
+  cymc8 hh hh <hh sn>16 sn16 hh8 <cymc sn>
+}
+
+upPreChorusEndingCrashB = \drummode
+
+{
+  hh hh hh <hh sn> hh <cymc sn>
+}
+
+upPreChorusOneFillA = \drummode
+{
+  hh8 hh hh <hh sn> tomh16 tomh toml toml
+}
+
+upPreChorusOneFillB = \drummode
+{
+  hh8 hh hh <hh sn>16 sn32 sn sn16 sn sn sn
+}
+
 downPreChorusOne = \drummode
 {
   bd8. bd8 bd8. bd16 bd8.
 }
 
-downPreChorusOneFillA = \drummode
+downPreChorusOneEndingB = \drummode
+{
+  bd8. bd8 bd8. bd16 bd32 bd32 r8
+}
+
+downPreChorusOneFill = \drummode
 {
   bd8. bd8 bd8. r4
 }
@@ -146,13 +178,24 @@ allPreChorusOne = \drummode
       \repeat percent 3
       { \upPreChorusOneHeadingCrash }
       \upPreChorusOneFillA
+
+      \break
+      \upPreChorusOneHeadTailCrash
+      \upPreChorusEndingCrashA
+      \upPreChorusEndingCrashB
+      \upPreChorusOneFillB
     }
     \new DrumVoice
     {
       \voiceTwo
       \repeat percent 3
       { \downPreChorusOne }
-      \downPreChorusOneFillA
+      \downPreChorusOneFill
+
+      \downPreChorusOne
+      \downPreChorusOne
+      \downPreChorusOneEndingB
+      \downPreChorusOneFill
     }
   >>
 }

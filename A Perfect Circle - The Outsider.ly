@@ -60,14 +60,14 @@ upVerseOneEndingCrashes = \drummode
   hhc8 hh <hh sn> hh hh hh <cymc sn> <cymc sn>
 }
 
-upVerseOneEndingHHO = \drummode
+upVerseOneEndingTom = \drummode
 {
-  hhc8 hh <hh sn> hh hh hh <hho sn> r
+  hhc8 hh <hh sn> hh hh hh <hho sn> toml
 }
 
 upVerseOneFill = \drummode
 {
-  hhc8 hh <hh sn> cymc hh16 sn16 r8 sn8. sn16
+  hhc8 hh <hh sn> cymc hh16 sn16 r8 sn8 tomfl16 sn16
 }
 
 downVerseOne = \drummode
@@ -75,19 +75,14 @@ downVerseOne = \drummode
   bd8.[ bd8.] bd8. bd8 bd16 r4
 }
 
-downVerseOneEndingTom = \drummode
+downVerseOneEndingBDRoll = \drummode
 {
-  bd8.[ bd8.] bd8. bd8 bd16 r8 toml
-}
-
-downVerseOneEndingSnareRollTom = \drummode
-{
-  bd8.[ bd8.] bd8. bd16 bd bd r8 tomfl
+  bd8.[ bd8.] bd8. bd16 bd bd r4
 }
 
 downVerseOneFill = \drummode
 {
-  bd8.[ bd8.] bd4 bd16[ bd16] r8 tomfl8
+  bd8.[ bd8.] bd4 bd16[ bd16] r4
 }
 
 allVerseOne = \drummode
@@ -101,9 +96,9 @@ allVerseOne = \drummode
       \upVerseOne
       \upVerseOneEndingCrashes
 
-      \upVerseOneEndingHHO
-      \upVerseOneEndingHHO
-      \upVerseOneEndingHHO
+      \upVerseOneEndingTom
+      \upVerseOneEndingTom
+      \upVerseOneEndingTom
       \upVerseOneFill
     }
     \new DrumVoice
@@ -114,22 +109,22 @@ allVerseOne = \drummode
       \downVerseOne
       \downVerseOne
 
-      \downVerseOneEndingTom
-      \downVerseOneEndingTom
-      \downVerseOneEndingSnareRollTom
+      \downVerseOne
+      \downVerseOne
+      \downVerseOneEndingBDRoll
       \downVerseOneFill
     }
   >>
 }
 
-upPreChorusOneFillA = \drummode
-{
-  hh8 hh hh <hh sn>4
-}
-
 upPreChorusOneHeadingCrash = \drummode
 {
   cymc8 hh hh <hh sn> hh <hh sn>
+}
+
+upPreChorusOneFillA = \drummode
+{
+  hh8 hh hh <hh sn> tomh16 tomh toml toml
 }
 
 downPreChorusOne = \drummode
@@ -139,7 +134,7 @@ downPreChorusOne = \drummode
 
 downPreChorusOneFillA = \drummode
 {
-  bd8. bd8 bd8. tomh16[ tomh toml toml]
+  bd8. bd8 bd8. r4
 }
 
 allPreChorusOne = \drummode

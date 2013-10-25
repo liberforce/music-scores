@@ -97,6 +97,7 @@ allVerseOne = \drummode
       \upVerseOne
       \upVerseOneEndingCrashes
 
+      \break
       \upVerseOneEndingTom
       \upVerseOneEndingTom
       \upVerseOneEndingTom
@@ -134,13 +135,11 @@ upPreChorusOneHeadTailCrash = \drummode
 }
 
 upPreChorusEndingCrashA = \drummode
-
 {
   cymc8 hh hh <hh sn>16 sn16 hh8 <cymc sn>
 }
 
 upPreChorusEndingCrashB = \drummode
-
 {
   hh hh hh <hh sn> hh <cymc sn>
 }

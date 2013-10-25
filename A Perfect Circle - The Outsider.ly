@@ -159,11 +159,6 @@ downPreChorusOne = \drummode
   bd8. bd8 bd8. bd16 bd8.
 }
 
-downPreChorusOneEndingB = \drummode
-{
-  bd8. bd8 bd8. bd16 bd32 bd32 r8
-}
-
 downPreChorusOneFill = \drummode
 {
   bd8. bd8 bd8. r4
@@ -194,7 +189,7 @@ allPreChorusOne = \drummode
 
       \downPreChorusOne
       \downPreChorusOne
-      \downPreChorusOneEndingB
+      \downPreChorusOne
       \downPreChorusOneFill
     }
   >>

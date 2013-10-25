@@ -152,7 +152,7 @@ upPreChorusOneFillA = \drummode
 
 upPreChorusOneFillB = \drummode
 {
-  hh8 hh hh <hh sn>16 sn32 sn sn16 sn sn sn
+  hh8 hh hh sn16^"R" sn32^"L" sn^"L" sn16^"R" sn^"L" sn^"R" sn^"L"
 }
 
 downPreChorusOne = \drummode

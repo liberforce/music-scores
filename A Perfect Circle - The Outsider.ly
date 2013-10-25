@@ -202,17 +202,17 @@ upChorusOneEndingA = \drummode
 
 upChorusOneEndingB = \drummode
 {
-  hh16 sn hh8 sn16 sn32 sn tomfl16 tomfl sn tomfl tomfl sn
+  hh16 sn hh8 sn16^"R" sn32^"L" sn^"L" tomfl16^"R" tomfl^"R" sn^"L" tomfl^"R" tomfl^"R" sn^"L"
 }
 
 downChorusOneEndingA = \drummode
 {
-  bd8. bd16 bd4 bd8 bd8.
+  bd8 bd16 bd16 r8. bd8 bd8.
 }
 
 downChorusOneEndingB = \drummode
 {
-  bd8. bd8 bd8. r4
+  bd8. bd8. r4
 }
 
 allChorusOne = \drummode
@@ -240,7 +240,7 @@ allChorusOne = \drummode
       \downChorusOneEndingA
       
       \downTheme
-      \downTheme
+      \downChorusOneEndingA
       \downTheme
       \downChorusOneEndingB
     }

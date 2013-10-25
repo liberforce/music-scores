@@ -136,7 +136,7 @@ upPreChorusOneHeadTailCrash = \drummode
 
 upPreChorusEndingCrashA = \drummode
 {
-  cymc8 hh hh <hh sn>16 sn16 hh8 <cymc sn>
+  hh8 hh hh <hh sn>16 sn16 hh8 <cymc sn>
 }
 
 upPreChorusEndingCrashB = \drummode

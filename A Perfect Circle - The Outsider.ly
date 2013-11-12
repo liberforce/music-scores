@@ -247,9 +247,101 @@ allChorusOne = \drummode
   >>
 }
 
-allChorusTwo = \allChorusOne
+upInterludeHeadingCrash = \drummode
+{
+  cymc8 hho hhc <cymc sn> hh hh
+}
 
-allVerseTwo = \allVerseOne
+upInterlude = \drummode
+{
+  hh8 hho hhc <cymc sn> hh hh
+}
+
+upInterludeEndingA = \drummode
+{
+  hh8 hho hhc <cymc sn> <cymc sn> sn16 sn
+}
+
+downInterlude = \drummode
+{
+  bd8. bd r bd
+}
+
+downInterludeEndingA = \drummode
+{
+  bd8. bd r4
+}
+
+allInterlude = \drummode
+{
+  << 
+    \new DrumVoice
+    {
+      \voiceOne
+      \upInterludeHeadingCrash
+      \upInterlude
+      \upInterlude
+      \upInterludeEndingA
+    }
+    \new DrumVoice
+    {
+      \voiceTwo 
+      \downInterlude
+      \downInterlude
+      \downInterlude
+      \downInterludeEndingA
+    }
+  >>
+}
+
+upVerseTwoHeadingCrash = \drummode
+{
+  cymc16 <tommh tomml>8 tomml8.
+}
+
+upVerseTwo = \drummode
+{
+  hh8 hho hhc <cymc sn> <cymc sn> sn16 sn
+}
+
+downVerseTwo = \drummode
+{
+  bd16 bd8 bd8. bd16 bd8 bd8. bd8 bd8
+}
+
+downVerseTwoEndingB = \drummode
+{
+  bd8. bd bd bd8 bd16 r4
+}
+
+allVerseTwo = \drummode
+{
+  << 
+    \new DrumVoice
+    {
+      \voiceOne
+      \upVerseTwo
+      \upVerseTwo
+      \upVerseTwo
+      \upVerseTwo
+
+      \break
+      \upVerseTwo
+      \upVerseTwo
+      \upVerseTwo
+      \upVerseTwo
+    }
+    \new DrumVoice
+    {
+      \voiceTwo
+      \repeat unfold 7
+      { \downVerseTwo }
+      \downVerseTwoEndingB
+    }
+  >>
+}
+
+allChorusTwo = \allChorusOne
 
 allOutro = \allIntro
 
@@ -278,10 +370,15 @@ song =
   \allChorusOne
   \break
 
-%  \mark "Verse 2"
-%  \allVerseTwo
-%  \break
-%
+  \mark "Interlude"
+  \allInterlude
+  \break
+
+  \time 4/4
+  \mark "Verse 2"
+  \allVerseTwo
+  \break
+
 %  \mark "Chorus 2"
 %  \allChorusTwo
 %  \break

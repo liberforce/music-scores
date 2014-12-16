@@ -127,8 +127,8 @@ upSectionG = \drummode
   \break
 
   % Measure 43
-  tommh16^"R"[ tommh8^"L" tomml16^"L" tomml8^"R" tomfh16^"R" tomfh16^"L"] r16
-  sn16\<^"L"[ \mf \acciaccatura { sn[ sn] } sn^"L" tomml16^"R"] \stemDown { tomfh16[ tomfh \acciaccatura sn16 sn]\! } \stemUp
+  tommh16^"R" tommh^"L" r tomml^"L"[ tomml^"R"] r tomfh^"R" tomfh^"L" r
+  sn\<^"L"[ \mf \acciaccatura { sn[ sn] } sn^"L" tomml^"R"] tomfh tomfh \acciaccatura { sn8 } sn8\!
 }
 
 upSectionJ = \drummode

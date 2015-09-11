@@ -419,6 +419,7 @@ song =
   \tempo 4=80
 
   % Measures 1-4
+  \mark "Intro"
   \allSectionA
   \break
 

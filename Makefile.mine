@@ -1,0 +1,10 @@
+LILYPOND=lilypond
+SRC= $(wildcard *.ly)
+PDF= $(SRC:.ly=.pdf)
+
+%.pdf: %.ly
+	$(LILYPOND) --pdf $<;
+
+
+
+all: $(PDF)

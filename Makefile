@@ -15,6 +15,15 @@ VPATH = \
   $(CURDIR)/PDF \
   $(CURDIR)/MIDI
 
+songs = \
+  come_as_you_are.pdf       \
+  island_in_the_sun.pdf     \
+  paranoid.pdf              \
+  seven_nation_army.pdf     \
+  sunday_bloody_sunday.pdf  \
+  the_outsider.pdf          \
+  where_is_my_mind.pdf
+
 # La règle type pour créer un PDF et un MIDI à partir d'un fichier
 # source LY.
 # Les .pdf résultants iront dans le sous-répertoire "PDF" et les fichiers
@@ -28,5 +37,4 @@ VPATH = \
 		mv "$*.midi" MIDI/; \
 	fi
 
-
-all: weezer.pdf
+all: $(songs)

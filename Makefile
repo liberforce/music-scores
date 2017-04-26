@@ -7,34 +7,23 @@ LILY_CMD = lilypond #-ddelete-intermediate-files \
 # Les suffixes utilisés dans ce Makefile
 .SUFFIXES: .ly .ily .pdf .midi
 
-# Les fichiers sources et résultants sont recherchés dans les répertoires
-# listés dans la variable VPATH.  Ceux-ci sont tous des sous-répertoires
-# du répertoire courant (fourni par la variable de GNU make `CURDIR').
-VPATH = \
-  $(CURDIR)/Partitions \
-  $(CURDIR)/PDF \
-  $(CURDIR)/MIDI
+PARTS_DIR = Partitions
+MIDI_DIR  = MIDI
+PDF_DIR   = PDF
 
-songs = \
-  come_as_you_are.pdf       \
-  island_in_the_sun.pdf     \
-  paranoid.pdf              \
-  seven_nation_army.pdf     \
-  sunday_bloody_sunday.pdf  \
-  the_outsider.pdf          \
-  where_is_my_mind.pdf
+sources := $(wildcard $(PARTS_DIR)/*.ly)
+pdfs    := $(patsubst $(PARTS_DIR), $(PDF_DIR), $(sources))
+pdfs    := $(patsubst %.ly, %.pdf, $(pdfs))
+midis   := $(patsubst $(PARTS_DIR), $(MIDI_DIR), $(sources))
+midis   := $(patsubst %.ly, %.midi, $(midis))
 
-# La règle type pour créer un PDF et un MIDI à partir d'un fichier
-# source LY.
-# Les .pdf résultants iront dans le sous-répertoire "PDF" et les fichiers
-# .midi dans le sous-répertoire "MIDI".
 %.pdf %.midi: %.ly
 	$(LILY_CMD) $<; \
 	if test -f "$*.pdf"; then \
-		mv "$*.pdf" PDF/; \
+		mv "$*.pdf" $(PDF_DIR); \
 	fi; \
 	if test -f "$*.midi"; then \
-		mv "$*.midi" MIDI/; \
+		mv "$*.midi" $(MIDI_DIR); \
 	fi
 
-all: $(songs)
+all: $(pdfs) $(midis)
